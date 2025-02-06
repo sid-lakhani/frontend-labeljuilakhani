@@ -4,18 +4,18 @@ import React from "react";
 
 export default function Header() {
   return (
-    <div className="fixed top-8 left-[10%] w-[80%] h-[8%] flex items-center justify-between opacity-100 bg-white shadow-md rounded-lg px-4">
-      <div className="flex items-center gap-4">
+    <div className="fixed top-8 left-[10%] w-[80%] h-[8%] flex items-center justify-between bg-quaternary/90 shadow-md rounded-lg px-20">
+      <div className="flex items-center">
         <Image
-          src="/logo.png"
+          src="/name.png"
           alt="Logo"
-          width={100}
-          height={100}
+          width={200}
+          height={200}
           className="object-contain"
         />
       </div>
 
-      <nav className="flex items-center gap-6">
+      <nav className="flex items-center gap-10">
         <Link
           href="/about"
           className="text-lg text-primary hover:text-primary/80 duration-300 transition-colors"
