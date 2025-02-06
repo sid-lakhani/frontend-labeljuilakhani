@@ -3,8 +3,8 @@ import Header from "@/components/Header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Label Jui Lakhani",
-  description: "Welcome to Label Jui Lakhani",
+  title: "About | Label Jui Lakhani",
+  description: "About Label Jui Lakhani",
 };
 
 export default function Page() {
