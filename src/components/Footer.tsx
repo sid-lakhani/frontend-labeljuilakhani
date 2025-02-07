@@ -37,17 +37,17 @@ export default function Footer() {
         <div>
           <ul className="space-y-2">
             <li>
-              <a href="#home" className="hover:text-primary/80">
+              <a href="/" className="hover:text-primary/80">
                 Home
               </a>
             </li>
             <li>
-              <a href="#shop" className="hover:text-primary/80">
+              <a href="/shop" className="hover:text-primary/80">
                 Shop
               </a>
             </li>
             <li>
-              <a href="#blogs" className="hover:text-primary/80">
+              <a href="/blogs" className="hover:text-primary/80">
                 Blogs
               </a>
             </li>
@@ -58,18 +58,18 @@ export default function Footer() {
         <div>
           <ul className="space-y-2">
             <li>
-              <a href="#lookbook" className="hover:text-primary/80">
+              <a href="/lookbook" className="hover:text-primary/80">
                 Lookbook
               </a>
             </li>
             <li>
-              <a href="#about" className="hover:text-primary/80">
+              <a href="/about" className="hover:text-primary/80">
                 About Us
               </a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-primary/80">
-                Contact Us
+              <a href="/customs" className="hover:text-primary/80">
+                Customs / Contact Us
               </a>
             </li>
           </ul>
