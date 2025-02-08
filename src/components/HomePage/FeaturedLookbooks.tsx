@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 interface Collection {
   name: string;
   description: string | null;
-  featureImage: {
+  CoverImageLookbook: {
     url: string;
   };
 }
@@ -17,7 +17,7 @@ export default function FeaturedLookbooks() {
   useEffect(() => {
     const fetchCollection = async () => {
       try {
-        const response = await fetch('http://localhost:1337/api/collections?filters[isFeatured][$eq]=true&populate=*');
+        const response = await fetch('http://localhost:1337/api/collections?populate=*');
         const data = await response.json();
         if (data.data && data.data.length > 0) {
           setCollection(data.data[0]);
@@ -30,7 +30,7 @@ export default function FeaturedLookbooks() {
     fetchCollection();
   }, []);
 
-  const imageUrl = collection ? `http://localhost:1337${collection.featureImage.url}` : '';
+  const imageUrl = collection ? `http://localhost:1337${collection.CoverImageLookbook.url}` : '';
 
   return (
     <div className={`h-[44dvh] bg-secondary text-7xl flex items-center justify-center text-white`}>
