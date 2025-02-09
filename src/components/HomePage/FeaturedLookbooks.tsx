@@ -37,7 +37,7 @@ export default function FeaturedLookbooks() {
 
   return (
     <div
-      className={`h-[44dvh] bg-primary text-7xl flex items-center justify-center text-white`}
+      className={`h-[50dvh] bg-secondary text-7xl flex items-center justify-center text-white`}
     >
       {collection ? (
         // If collection data is available, show the image

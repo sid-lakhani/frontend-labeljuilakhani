@@ -41,14 +41,14 @@ export default function HeroSection() {
       )}
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white font-playfair">
-        <p className="italic text-[96px] tracking-tighter leading-[1]">
+        <p className="italic text-8xl tracking-tighter leading-[0.9]">
           Celebrated Couture
         </p>
-        <p className="text-[120px] font-normal tracking-tight leading-[1] uppercase">
+        <p className="text-9xl font-normal tracking-tight leading-[0.9] uppercase">
           Ethnic Elegance
         </p>
-        <p className="text-[120px] font-normal tracking-tight leading-[1] uppercase">
-          <span className="italic text-[96px]">&</span> Design House
+        <p className="text-9xl font-normal tracking-tight leading-[0.9] uppercase">
+          <span className="italic text-8xl">&</span> Design House
         </p>
         <Link
           href={"/customs"}
