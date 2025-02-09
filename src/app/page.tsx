@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import AboutSection from "@/components/HomePage/AboutSection";
+import ContactSection from "@/components/HomePage/ContactSection";
 import FeaturedLookbooks from "@/components/HomePage/FeaturedLookbooks";
 import HeroSection from "@/components/HomePage/HeroSection";
 import type { Metadata } from "next";
@@ -17,6 +18,7 @@ export default function Page() {
       <HeroSection />
       <AboutSection />
       <FeaturedLookbooks />
+      <ContactSection />
       <Footer />
     </div>
   );

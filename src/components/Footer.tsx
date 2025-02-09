@@ -1,122 +1,42 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="bg-quaternary text-primary py-8 px-4">
-      <div className="text-center mb-8">
-        <h2 className="text-lg font-semibold mb-2">Get in touch with us</h2>
-        <p className="text-sm">
-          Make your special occasion truly yours with custom-designed outfits!
-          Reach out to us.
+    <div className="h-[50dvh] flex flex-row items-center justify-evenly my-10 mx-2">
+      <div>
+        <p className="font-playfair italic text-8xl tracking-tighter ml-4">
+          Let's us
         </p>
-      </div>
-
-      {/* Newsletter Subscription */}
-      <div className="m-8 text-center">
-        <form className="inline-flex items-center space-x-4">
-          <label htmlFor="email" className="text-primary text-sm">
-            Email:
-          </label>
-          <input
-            id="email"
-            type="email"
-            placeholder="________________________"
-            className="border-none outline-none bg-transparent text-primary text-sm placeholder-primary focus:ring-0"
-          />
-          <button
-            type="submit"
-            className="text-sm font-medium text-primary hover:underline"
-          >
-            Subscribe
+        <p className="font-playfair italic text-8xl tracking-tighter">
+          Collaborate
+        </p>
+        <Link href="/contact">
+          <button className="bg-black/85 text-white font-montserrat font-bold text-xs mt-4 ml-2 px-8 py-2 uppercase">
+            Book a call
           </button>
-        </form>
+        </Link>
       </div>
-
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm">
-        {/* Left Column */}
-        <div>
-          <ul className="space-y-2">
-            <li>
-              <a href="/" className="hover:text-primary/80">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/shop" className="hover:text-primary/80">
-                Shop
-              </a>
-            </li>
-            <li>
-              <a href="/blogs" className="hover:text-primary/80">
-                Blogs
-              </a>
-            </li>
-          </ul>
+      <div className="flex flex-row items-start justify-evenly gap-40 uppercase font-montserrat text-xs">
+        <div className="flex flex-col gap-6">
+          <h1 className="font-bold">Services</h1>
+          <Link href="/">Service 1</Link>
+          <Link href="/">Service 2</Link>
+          <Link href="/">Service 3</Link>
         </div>
-
-        {/* Middle Left Column */}
-        <div>
-          <ul className="space-y-2">
-            <li>
-              <a href="/lookbook" className="hover:text-primary/80">
-                Lookbook
-              </a>
-            </li>
-            <li>
-              <a href="/about" className="hover:text-primary/80">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="/customs" className="hover:text-primary/80">
-                Customs / Contact Us
-              </a>
-            </li>
-          </ul>
+        <div className="flex flex-col gap-6">
+          <h1 className="font-bold">Socials</h1>
+          <Link href="/">Social 1</Link>
+          <Link href="/">Social 2</Link>
+          <Link href="/">Social 3</Link>
+          <Link href="/">Social 4</Link>
         </div>
-
-        {/* Middle Right Column */}
-        <div>
-          <ul className="space-y-2">
-            <li>
-              <a href="#policy" className="hover:text-primary/80">
-                Store Policy
-              </a>
-            </li>
-            <li>
-              <a href="#shipping" className="hover:text-primary/80">
-                Shipping & Returns
-              </a>
-            </li>
-            <li>
-              <a href="#faqs" className="hover:text-primary/80">
-                FAQs
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Right Column */}
-        <div>
-          <ul className="space-y-2">
-            <li>
-              <a href="#facebook" className="hover:text-primary/80">
-                Facebook
-              </a>
-            </li>
-            <li>
-              <a href="#instagram" className="hover:text-primary/80">
-                Instagram
-              </a>
-            </li>
-            <li>
-              <a href="#pinterest" className="hover:text-primary/80">
-                Pinterest
-              </a>
-            </li>
-          </ul>
+        <div className="flex flex-col gap-6">
+          <h1 className="font-bold">Transparency</h1>
+          <Link href="/">Pricing</Link>
+          <Link href="/">FAQs</Link>
         </div>
       </div>
-    </footer>
+    </div>
   );
 }

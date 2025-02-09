@@ -48,7 +48,7 @@ export default function FeaturedLookbooks() {
         />
       ) : (
         // If no collection data, display fallback content
-        <p>No featured collection available.</p>
+        <p className="font-playfair">No featured collection available.</p>
       )}
     </div>
   );
