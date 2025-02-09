@@ -15,6 +15,12 @@ export default {
         quaternary: "#e4e1d8",
         quinary : "#766551"        
       },
+      fontFamily: {
+        montserrat: "var(--font-montserrat), sans-serif",
+        playfair: "var(--font-playfair), serif",
+        sen: "var(--font-sen), sans-serif",
+        moontime: "var(--font-moontime), cursive",
+      },
     },
   },
   plugins: [],
