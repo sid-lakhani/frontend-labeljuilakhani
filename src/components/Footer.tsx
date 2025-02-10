@@ -17,22 +17,25 @@ export default function Footer() {
           </button>
         </Link>
       </div>
-      <div className="flex flex-row items-start justify-evenly gap-40 uppercase font-montserrat text-sm">
-        <div className="flex flex-col gap-6">
-          <h1 className="font-bold">Services</h1>
-          <Link href="/">Service 1</Link>
-          <Link href="/">Service 2</Link>
-          <Link href="/">Service 3</Link>
+      <div className="flex flex-row items-start justify-evenly gap-40 uppercase font-montserrat text-xs">
+        <div className="flex flex-col gap-4">
+          <h1 className="font-bold text-sm">Quick Links</h1>
+          <Link href="/">Home</Link>
+          <Link href="/about">About Us</Link>
+          <Link href="/lookbook">Lookbooks</Link>
+          <Link href="/shop">Shop</Link>
+          <Link href="/blogs">Blogs</Link>
+          <Link href="/customs">Customs</Link>
         </div>
         <div className="flex flex-col gap-6">
-          <h1 className="font-bold">Socials</h1>
-          <Link href="/">Social 1</Link>
+          <h1 className="font-bold text-sm">Socials</h1>
+          <Link href="/">Instagram</Link>
           <Link href="/">Social 2</Link>
           <Link href="/">Social 3</Link>
           <Link href="/">Social 4</Link>
         </div>
         <div className="flex flex-col gap-6">
-          <h1 className="font-bold">Transparency</h1>
+          <h1 className="font-bold text-sm">Transparency</h1>
           <Link href="/">Pricing</Link>
           <Link href="/">FAQs</Link>
         </div>
