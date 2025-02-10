@@ -6,7 +6,7 @@ export default function ContactSection() {
   return (
     <div className="h-[70dvh] flex items-center justify-center my-20 gap-24">
       <Image
-        src={"/logo-beige.png"}
+        src={"/logo.png"}
         alt="Contact"
         width={500}
         height={500}

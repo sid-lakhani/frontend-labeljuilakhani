@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutSection() {
   return (
-    <div className="h-[90dvh] text-7xl py-[5%] px-[20%] flex flex-col justify-center">
+    <div className="h-[90dvh] py-[5%] px-[20%] flex flex-col justify-center">
       <p className="text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-secondary">
         About us
       </p>
@@ -27,7 +27,7 @@ export default function AboutSection() {
         editorials, commercial photography, and artistic campaigns, we bring a
         fresh perspective and meticulous attention to detail. We strive to
         exceed expectations with a client-centric approach, delivering
-        compelling visual content that resonates with audiences.{" "}
+        compelling visual content that resonates with audiences.
       </p>
     </div>
   );

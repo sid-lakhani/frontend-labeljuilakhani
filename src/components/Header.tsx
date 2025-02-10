@@ -4,54 +4,47 @@ import React from "react";
 
 export default function Header() {
   return (
-    <div className="fixed top-8 left-[3%] w-[94%] h-[8%] flex items-center bg-quaternary/90 shadow-md rounded-lg px-8 z-[999]">
+    <div className="fixed top-8 left-[3%] w-[94%] h-[8%] flex items-center bg-quinary/50 backdrop-blur-xl shadow-lg rounded-lg px-8 z-[999]">
       {/* Logo and Name */}
       <Link href="/" className="flex items-center">
         <Image
-          src="/logo.png"
-          alt="Logo"
-          width={80}
-          height={80}
-          className="object-contain"
-        />
-        <Image
-          src="/name.png"
+          src="/Header.png"
           alt="Logo"
           width={200}
-          height={200}
+          height={80}
           className="object-contain"
         />
       </Link>
 
       {/* Navigation Links */}
-      <nav className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-8 uppercase text-md font-montserrat font-semibold">
+      <nav className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-8 uppercase text-lg font-montserrat font-semibold">
         <Link
           href="/about"
-          className="text-primary hover:text-primary/80 duration-300 transition-colors"
+          className="text-white hover:text-white/70 duration-100 transition-colors"
         >
           About Us
         </Link>
         <Link
           href="/lookbook"
-          className="text-primary hover:text-primary/80 duration-300 transition-colors"
+          className="text-white hover:text-white/70 duration-100 transition-colors"
         >
           Lookbook
         </Link>
         <Link
           href="/shop"
-          className="text-primary hover:text-primary/80 duration-300 transition-colors"
+          className="text-white hover:text-white/70 duration-100 transition-colors"
         >
           Shop
         </Link>
         <Link
           href="/blogs"
-          className="text-primary hover:text-primary/80 duration-300 transition-colors"
+          className="text-white hover:text-white/70 duration-100 transition-colors"
         >
           Blogs
         </Link>
         <Link
           href="/customs"
-          className="text-primary hover:text-primary/80 duration-300 transition-colors"
+          className="text-white hover:text-white/70 duration-100 transition-colors"
         >
           Customs
         </Link>
