@@ -1,4 +1,5 @@
 import HeroSection from "@/components/AboutUsPage/HeroSection";
+import StatsSection from "@/components/AboutUsPage/StatsSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
@@ -13,6 +14,7 @@ export default function Page() {
     <div className="flex flex-col min-h-screen min-w-screen">
       <Header />
       <HeroSection />
+      <StatsSection />
       <Footer />
     </div>
   );
