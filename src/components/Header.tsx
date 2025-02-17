@@ -5,7 +5,6 @@ import React from "react";
 export default function Header() {
   return (
     <div className="fixed top-8 left-[3%] w-[94%] h-[8%] flex items-center bg-quinary/50 backdrop-blur-xl shadow-lg rounded-lg px-8 z-[999]">
-      {/* Logo and Name */}
       <Link href="/" className="flex items-center">
         <Image
           src="/Header.png"

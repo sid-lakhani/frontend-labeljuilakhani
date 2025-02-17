@@ -29,7 +29,7 @@ export default function ContactSection() {
           create timeless designs.
         </p>
 
-        <Link href="/contact">
+        <Link href="/customs">
           <button className="bg-black/85 text-white font-montserrat font-bold text-xs mt-8 px-12 py-2 ">
             Contact us
           </button>

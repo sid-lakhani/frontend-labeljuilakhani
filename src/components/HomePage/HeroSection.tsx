@@ -50,7 +50,7 @@ export default function HeroSection() {
         <p className="text-9xl font-normal tracking-tight leading-[0.9] uppercase">
           <span className="italic text-8xl">&</span> Design House
         </p>
-        <Link href={"/contact"}>
+        <Link href={"/customs"}>
           <button className="mt-8 px-16 py-4 border border-white text-white font-montserrat font-bold text-sm rounded-full uppercase hover:underline">
             Book a call
           </button>

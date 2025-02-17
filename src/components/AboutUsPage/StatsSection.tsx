@@ -2,7 +2,7 @@ import React from "react";
 
 export default function StatsSection() {
   return (
-    <div className="min-h-screen w-screen py-[5%] px-[15%]">
+    <div className="min-h-fit w-screen py-[5%] px-[15%]">
       <div className="flex flex-row justify-center items-center w-full">
         <h1 className="w-1/2 font-playfair text-4xl text-black/90 traicking-tighter">
           Elevate your online presence with our exquisite Framer template
