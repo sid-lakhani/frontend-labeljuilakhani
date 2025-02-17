@@ -1,39 +1,57 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const blogPosts = [
-  {
-    id: 1,
-    date: "Apr 8, 2025",
-    title: "Luxury Visions: Evoking Emotion through Exquisite Imagery",
-    author: "By Jui Lakhani",
-    image: "/logo.png",
-  },
-  {
-    id: 2,
-    date: "Apr 8, 2025",
-    title: "Luxury Visions: Evoking Emotion through Exquisite Imagery",
-    author: "By Jui Lakhani",
-    image: "/logo.png",
-  },
-  {
-    id: 3,
-    date: "Apr 8, 2025",
-    title: "Luxury Visions: Evoking Emotion through Exquisite Imagery",
-    author: "By Jui Lakhani",
-    image: "/logo.png",
-  },
-  {
-    id: 4,
-    date: "Apr 8, 2025",
-    title: "Luxury Visions: Evoking Emotion through Exquisite Imagery",
-    author: "By Jui Lakhani",
-    image: "/logo.png",
-  },
-];
+interface Blog {
+  id: number;
+  Title: string;
+  isFeatured: boolean;
+  shortDescription: string | null;
+  BlogDate: string;
+  slugUrl: string;
+  coverImage: {
+    url: string;
+  };
+}
 
 export default function BlogSection() {
+  const [featuredBlog, setFeaturedBlog] = useState<Blog | null>(null);
+  const [otherBlogs, setOtherBlogs] = useState<Blog[]>([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        // Fetch Featured Blog
+        const featuredRes = await fetch(
+          "http://localhost:1337/api/blogs?filters[isFeatured][$eq]=true&populate=*"
+        );
+        const featuredData = await featuredRes.json();
+
+        if (featuredData.data && featuredData.data.length > 0) {
+          setFeaturedBlog(featuredData.data[0]); // There is always only one featured blog
+        }
+
+        // Fetch Other Blogs
+        const otherRes = await fetch(
+          "http://localhost:1337/api/blogs?filters[isFeatured][$eq]=false&populate=*"
+        );
+        const otherData = await otherRes.json();
+
+        if (otherData.data) {
+          setOtherBlogs(otherData.data);
+        }
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+  const imageUrl = `http://localhost:1337${featuredBlog?.coverImage.url}`;
+
   return (
     <div className="min-h-screen w-screen py-[5%] px-[20%] pt-40">
       <p className="text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-black/80">
@@ -42,63 +60,61 @@ export default function BlogSection() {
       <p className="text-8xl font-playfair text-black/80 tracking-tighter mt-2">
         Editorials
       </p>
+
+      {/* Featured Blog */}
       <div className="w-full h-[700px] mt-16 flex flex-row bg-tertiary text-quaternary">
-        <Image
-          src={"/logo.png"}
+        <img
+          src={imageUrl}
           alt="featured-blog"
-          width={400}
-          height={600}
           className="w-1/2 h-full object-cover bg-primary"
         />
         <div className="w-1/2 h-full flex flex-col justify-center px-[5%] gap-4">
           <p className="text-sm uppercase tracking-[0.5em] font-montserrat font-medium">
             Featured
           </p>
-          <h1 className="font-playfair text-5xl">
-            Iconic High-End Fashion Houses and Their Impact on Global Trends
-          </h1>
+          <h1 className="font-playfair text-5xl">{featuredBlog?.Title}</h1>
           <p className="text-sm ml-1 tracking-[0.5em] uppercase font-montserrat font-medium">
-            Feb 17, 2025
+            {featuredBlog?.BlogDate}
           </p>
-          <p className="font-sen text-sm">
-            Founded on a love for visual storytelling, Chloe Laurent blends
-            creativity and precision in all our work. We deliver bespoke
-            photography solutions that resonate and inspire. Join us on a
-            journey where every image tells a compelling story.
-          </p>
-          <Link href="/blogs/1">
-            <button className="bg-quaternary text-tertiary border border-black/80 font-montserrat font-bold text-xs px-4 py-2 ">
+          <p className="font-sen text-sm">{featuredBlog?.shortDescription}</p>
+          <Link href={`/blogs/${featuredBlog?.slugUrl}`}>
+            <button className="bg-quaternary text-tertiary border border-black/80 font-montserrat font-bold text-xs px-4 py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary">
               Read More
             </button>
           </Link>
         </div>
       </div>
+
+      {/* Other Blogs */}
       <div className="grid grid-cols-2 gap-8 mt-16">
-        {blogPosts.map((post) => (
-          <div
-            key={post.id}
-            className="flex flex-col border border-black/20"
-          >
-            <Image
-              src={post.image}
-              alt={post.title}
-              width={400}
-              height={600}
-              className="w-full object-cover bg-primary"
-            />
-            <div className="p-8">
-              <p className="text-sm mt-6 tracking-[0.5em] uppercase font-montserrat font-medium">
-                {post.date}
-              </p>
-              <h2 className="font-playfair text-5xl text-primary mt-4 leading-[3.5rem]">
-                {post.title}
-              </h2>
-              <p className="text-sm font-sen text-black/60 mt-6">
-                {post.author}
-              </p>
+        {otherBlogs.map((post) => {
+          const postImageUrl = `http://localhost:1337${post.coverImage.url}`;
+          return (
+            <div key={post.id} className="flex flex-col border border-black/10">
+              <img
+                src={postImageUrl}
+                alt="blog"
+                className="w-full h-full object-contain"
+              />
+              <div className="p-8">
+                <p className="text-sm mt-6 tracking-[0.5em] uppercase font-montserrat font-medium">
+                  {post.BlogDate}
+                </p>
+                <h2 className="font-playfair text-5xl text-primary mt-4 leading-[3.5rem]">
+                  {post.Title}
+                </h2>
+                <p className="text-sm font-sen text-black/60 mt-6">
+                  By Jui Lakhani
+                </p>
+                <Link href={`/blogs/${post.slugUrl}`}>
+                  <button className="bg-quaternary text-tertiary border border-black/80 font-montserrat font-bold text-xs px-4 py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary mt-6">
+                    Read More
+                  </button>
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
