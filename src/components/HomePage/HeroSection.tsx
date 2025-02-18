@@ -51,8 +51,8 @@ export default function HeroSection() {
           <span className="italic text-8xl">&</span> Design House
         </p>
         <Link href={"/customs"}>
-          <button className="mt-8 px-16 py-4 border border-white text-white font-montserrat font-bold text-sm rounded-full uppercase hover:underline">
-            Book a call
+          <button className="mt-8 px-12 py-4 border border-white text-white font-montserrat font-bold text-sm rounded-full uppercase hover:underline">
+            Explore More
           </button>
         </Link>
       </div>

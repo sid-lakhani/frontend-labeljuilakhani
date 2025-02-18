@@ -7,8 +7,8 @@ export default function Testimonials() {
         <p className="text-sm uppercase tracking-[0.5em] font-montserrat font-medium">
           Testimonial
         </p>
-        <p className="italic leading-[0.9]">Shared by</p>
-        <p className="text-primary uppercase leading-[0.9]">Perspective</p>
+        <p className="italic leading-[0.9]">Shared</p>
+        <p className="text-primary uppercase leading-[0.9]">Perspectives</p>
         <p className="uppercase leading-[0.9]">
           <span className="italic lowercase">
             by <span className="uppercase">Our</span>

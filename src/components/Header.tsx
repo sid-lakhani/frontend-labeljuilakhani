@@ -1,12 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export default function Header() {
   return (
     <div className="fixed top-8 left-[3%] w-[94%] h-[8%] flex items-center bg-quinary/50 backdrop-blur-xl shadow-lg rounded-lg px-8 z-[999]">
       <Link href="/" className="flex items-center">
-        <Image
+        <img
           src="/Header.png"
           alt="Logo"
           width={200}
@@ -16,7 +14,7 @@ export default function Header() {
       </Link>
 
       {/* Navigation Links */}
-      <nav className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-8 uppercase text-lg font-montserrat font-semibold">
+      <nav className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-8 uppercase text-2xl font-montserrat">
         <Link
           href="/about"
           className="text-white hover:text-white/70 duration-100 transition-colors"
@@ -28,12 +26,6 @@ export default function Header() {
           className="text-white hover:text-white/70 duration-100 transition-colors"
         >
           Lookbook
-        </Link>
-        <Link
-          href="/shop"
-          className="text-white hover:text-white/70 duration-100 transition-colors"
-        >
-          Shop
         </Link>
         <Link
           href="/blogs"
@@ -48,6 +40,16 @@ export default function Header() {
           Customs
         </Link>
       </nav>
+
+      {/* Shop Button */}
+      <div className="ml-auto">
+        <Link
+          href="https://shop.labeljuilakhani.com"
+          className="text-lg font-montserrat font-bold uppercase text-white border border-white px-6 py-2 rounded-full hover:underline"
+        >
+          Shop now
+        </Link>
+      </div>
     </div>
   );
 }
