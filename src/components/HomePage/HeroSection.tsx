@@ -32,8 +32,6 @@ export default function HeroSection() {
         <img
           src={homeImage}
           alt="Home Image"
-          width={1440}
-          height={1080}
           className="w-full h-screen object-cover"
         />
       ) : (
