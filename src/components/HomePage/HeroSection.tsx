@@ -10,13 +10,13 @@ export default function HeroSection() {
     async function fetchHomeImage() {
       try {
         const res = await fetch(
-          "http://localhost:1337/api/collections?filters[isLive][$eq]=true&populate=*"
+          "http://10.0.0.54:1337/api/collections?filters[isLive][$eq]=true&populate=*"
         );
         const data = await res.json();
         const imageUrl = data?.data?.[0]?.HomePageIfLive?.url;
 
         if (imageUrl) {
-          setHomeImage(`http://localhost:1337${imageUrl}`);
+          setHomeImage(`http://10.0.0.54:1337${imageUrl}`);
         }
       } catch (error) {
         console.error("Error fetching home image:", error);
@@ -39,17 +39,17 @@ export default function HeroSection() {
       )}
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white font-playfair">
-        <p className="italic text-8xl tracking-tighter leading-[0.9]">
+        <p className="italic text-3xl md:text-6xl lg:text-8xl tracking-tighter leading-[0.9]">
           Celebrated Couture
         </p>
-        <p className="text-9xl font-normal tracking-tight leading-[0.9] uppercase">
+        <p className="text-4xl md:text-7xl lg:text-9xl font-normal tracking-tight leading-[0.9] uppercase">
           Ethnic Elegance
         </p>
-        <p className="text-9xl font-normal tracking-tight leading-[0.9] uppercase">
-          <span className="italic text-8xl">&</span> Design House
+        <p className="text-4xl md:text-7xl lg:text-9xl font-normal tracking-tight leading-[0.9] uppercase">
+          <span className="italic text-4xl md:text-6xl lg:text-8xl ">&</span> Design House
         </p>
         <Link href={"/customs"}>
-          <button className="mt-8 px-12 py-4 border border-white text-white font-montserrat font-bold text-sm rounded-full uppercase hover:underline">
+          <button className="mt-2 md:mt-4 lg:mt-8 px-6 lg:px-12 py-2 lg:py-4 border border-white text-white font-montserrat font-bold text-xs md:text-[10px] lg:text-sm rounded-full uppercase hover:underline">
             Explore More
           </button>
         </Link>

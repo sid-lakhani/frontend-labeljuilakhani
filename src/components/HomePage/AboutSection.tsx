@@ -2,11 +2,11 @@ import React from "react";
 
 export default function AboutSection() {
   return (
-    <div className="h-[90dvh] py-[5%] px-[20%] flex flex-col justify-center">
-      <p className="text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-secondary">
+    <div className="h-[90dvh] py-[5%] px-[5%] md:px-[10%] lg:px-[20%] flex flex-col justify-center">
+      <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-secondary">
         About us
       </p>
-      <div className="text-8xl font-playfair text-secondary tracking-tighter mt-2">
+      <div className="text-5xl md:text-7xl lg:text-8xl font-playfair text-secondary tracking-tighter mt-2">
         <p className="leading-[0.9]">More than</p>
         <p className="uppercase text-primary leading-[0.9]">
           Pictures <span className="lowercase text-secondary italic">we</span>
@@ -16,11 +16,11 @@ export default function AboutSection() {
         </p>
       </div>
 
-      <h1 className="font-playfair text-4xl tracking-tight mt-20">
+      <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl tracking-tight mt-12 lg:mt-20">
         Impress your clients with a sleek and professional website that
         showcases your agency's expertise and creativity.
       </h1>
-      <p className="font-sen text-lg mt-6 text-black/60 tracking-tight">
+      <p className="font-sen text-sm md:text-base lg:text-lg mt-6 text-black/60 tracking-tight">
         Chloe Laurent embodies a vision of creativity and refinement in
         photography and fashion. Our commitment to innovation and quality shines
         through in every project we undertake. Specializing in fashion
