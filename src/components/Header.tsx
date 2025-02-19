@@ -2,17 +2,17 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <div className="hidden fixed top-[3%] left-[3%] w-[94%] h-[8%] md:flex items-center bg-quinary/50 backdrop-blur-xl shadow-lg rounded-lg md:px-4 lg:px-8 z-[999]">
+    <div className="fixed top-[3%] left-[3%] w-[94%] h-[8%] flex items-center bg-quinary/50 backdrop-blur-xl shadow-lg rounded-lg px-4 lg:px-8 z-[999]">
       <Link href="/" className="flex items-center">
         <img
           src="/Header.png"
           alt="Logo"
-          className="lg:w-[200px] md:w-[175px] object-contain"
+          className="w-[150px] lg:w-[200px] md:w-[175px] object-contain"
         />
       </Link>
 
       {/* Navigation Links */}
-      <nav className="absolute left-1/2 transform -translate-x-1/2 flex items-center lg:gap-8 md:gap-4 uppercase lg:text-xl md:text-sm font-montserrat">
+      <nav className="hidden absolute left-1/2 transform -translate-x-1/2 md:flex items-center lg:gap-8 md:gap-4 uppercase lg:text-xl md:text-sm font-montserrat">
         <Link
           href="/about"
           className="text-white hover:text-white/70 duration-150 transition-colors"
@@ -43,11 +43,29 @@ export default function Header() {
       <div className="ml-auto">
         <Link
           href="https://shop.labeljuilakhani.com"
-          className="md:text-sm lg:text-lg font-montserrat font-bold uppercase text-white border border-white md:px-4 md:py-2 lg:px-6 lg:py-2 rounded-full hover:underline"
+          className="hidden md:block md:text-sm lg:text-lg font-montserrat font-bold uppercase text-white border border-white md:px-4 md:py-2 lg:px-6 lg:py-2 rounded-full hover:underline"
         >
           Shop now
         </Link>
       </div>
+
+      {/* Hamburger Menu */}
+      <button className="md:hidden ml-auto">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
     </div>
   );
 }

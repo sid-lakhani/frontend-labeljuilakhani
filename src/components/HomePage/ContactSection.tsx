@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ContactSection() {
   return (
-    <div className="h-[60dvh] md:h-[70dvh] flex flex-col md:flex-row items-center justify-center my-20 gap-4 md:gap-8 lg:gap-24">
+    <div className="h-fit flex flex-col md:flex-row items-center justify-center my-20 gap-4 md:gap-8 lg:gap-24">
       <img
         src={"/logo.png"}
         alt="Contact"
