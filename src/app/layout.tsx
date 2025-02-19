@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className= {`${Montserrat.variable} ${PlayfairDisplay.variable} ${Moontime.variable} ${Sen.variable} bg-quaternary antialiased`}
+        className= {`select-none ${Montserrat.variable} ${PlayfairDisplay.variable} ${Moontime.variable} ${Sen.variable} bg-quaternary antialiased`}
       >
         {children}
       </body>
