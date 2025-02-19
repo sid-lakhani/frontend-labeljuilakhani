@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="h-[45dvh] md:h-[40dvh] flex flex-col md:flex-row items-center justify-center md:justify-evenly gap-8 md:gap-0 bg-black/10 md:bg-inherit">
+    <div className="h-[45dvh] md:h-[40dvh] flex flex-col md:flex-row items-center justify-center md:justify-evenly gap-8 md:gap-0 bg-black/10 md:bg-inherit m-2">
       <div className="flex flex-row md:flex-col items-center md:items-start gap-8 md:gap-0">
         <div className="font-playfair italic text-5xl md:text-6xl lg:text-8xl tracking-tighter">
           <p className="ml-2 lg:ml-4">

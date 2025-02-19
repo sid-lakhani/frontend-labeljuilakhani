@@ -20,13 +20,13 @@ export default function ContactSection() {
         </p>
 
         <p className="mt-4 md:mt-8 font-sen text-sm md:text-base lg:text-lg text-black/60 tracking-tight">
-          We cherish couture inspired by Indian folk traditions, believing
-          fashion tells stories, evokes emotions, and inspires. Our mission:
-          create timeless designs.
+          Have questions, feedback, or need assistance? We’re here to help!
+          Reach out to us for any inquiries, from customs to order assistance,
+          we’ll be happy to assist.
         </p>
 
         <Link href="/customs">
-          <button className="bg-black/85 text-white font-montserrat font-bold text-[10px] md:text-xs mt-4 md:mt-8 px-6 md:px-8 lg:px-12 py-2 ">
+          <button className="bg-black/85 text-white font-montserrat font-bold text-[10px] md:text-xs mt-4 md:mt-8 px-6 md:px-8 lg:px-12 py-2 uppercase">
             Contact us
           </button>
         </Link>

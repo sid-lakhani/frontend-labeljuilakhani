@@ -17,17 +17,15 @@ export default function AboutSection() {
       </div>
 
       <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl tracking-tight mt-12 lg:mt-20">
-        Impress your clients with a sleek and professional website that
-        showcases your agency's expertise and creativity.
+        Welcome to the world of Jui Lakhani, where every creation is crafted
+        with love and designed to be uniquely yours!
       </h1>
       <p className="font-sen text-sm md:text-base lg:text-lg mt-6 text-black/60 tracking-tight">
-        Chloe Laurent embodies a vision of creativity and refinement in
-        photography and fashion. Our commitment to innovation and quality shines
-        through in every project we undertake. Specializing in fashion
-        editorials, commercial photography, and artistic campaigns, we bring a
-        fresh perspective and meticulous attention to detail. We strive to
-        exceed expectations with a client-centric approach, delivering
-        compelling visual content that resonates with audiences.
+        Our Label is built on a passion for fashion that is both creative and
+        conscious. Whether you are looking for everyday essentials or a
+        statement piece, we have something that speaks to your style. We are
+        committed to offering you clothing that not only elevates your wardrobe
+        but also respects the roots of fashion that have shaped it.
       </p>
     </div>
   );
