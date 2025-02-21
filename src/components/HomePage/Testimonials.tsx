@@ -52,30 +52,30 @@ export default function Testimonials() {
       {/* <div className="px-[5%] mt-4 lg:mt-12 flex justify-center items-center h-full text-3xl md:text-5xl lg:text-6xl font-playfair text-primary italic">
         Testimonials *
       </div> */}
-      <div className="my-40 px-8 relative w-full overflow-hidden">
+      <div className="my-20 lg:my-40 px-8 relative w-full overflow-hidden">
         <div className="flex w-fit gap-8 animate-scroll">
           {[...testimonials, ...testimonials].map((post, index) => {
             const postImageUrl = `http://localhost:1337${post.Image.url}`;
             return (
               <div
                 key={index}
-                className="bg-secondary rounded-3xl p-6 h-[400px] w-[400px] flex flex-col justify-between relative"
+                className="bg-secondary rounded-3xl p-6 h-[250px] md:h-[300px] lg:h-[400px] w-[250px] md:w-[300px] lg:w-[400px] flex flex-col justify-between relative"
               >
-                <p className="h-full font-sen text-2xl text-white italic whitespace-normal flex justify-center items-center text-center">
+                <p className="h-full font-sen text-base md:text-lg lg:text-2xl text-white italic whitespace-normal flex justify-center items-center text-center">
                   {post.Testimonial}
                 </p>
                 <img
                   src="/testimonial.svg"
-                  className="w-12 h-12 absolute top-8 left-6"
+                  className="w-6 md:w-8 lg:w-10 h-6 md:h-8 lg:h-10 absolute top-8 left-6"
                 />
                 <div className="absolute bottom-0 left-0 bg-quaternary flex items-center px-4 py-2 w-fit rounded-tr-3xl">
                   <img
                     src={postImageUrl}
                     alt={post.Name}
-                    className="w-10 h-10 rounded-full border border-secondary"
+                    className="w-6 md:w-8 lg:w-10 h-6 md:h-8 lg:h-10 rounded-full border border-secondary"
                   />
                   <div className="ml-3">
-                    <p className="font-sen text-base text-quinary">{post.Name}</p>
+                    <p className="font-sen text-xs md:text-sm lg:text-base text-quinary">{post.Name}</p>
                   </div>
                 </div>
               </div>

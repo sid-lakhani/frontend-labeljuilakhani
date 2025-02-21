@@ -7,44 +7,44 @@ export default function StatsSection() {
         <h1 className="w-full md:w-1/2 font-playfair text-2xl md:text-3xl lg:text-4xl text-black/90 traicking-tighter">
           A celebration of craftsmanship, heritage and timeless elegance.
         </h1>
-        <h2 className="w-full md:w-1/2 font-sen text-base md:text-lg lg:text-xl text-black/90 leading-relaxed tracking-tight">
+        <h2 className="w-full md:w-1/2 font-sen text-base md:text-lg lg:text-xl text-black/50 leading-relaxed tracking-tight mt-4 md:mt-0">
           A label that seamlessly blends tradition with modernity, creating
           exquisite collections that speaks to today’s confident, edgy and
           culturally rooted individuals.
         </h2>
       </div>
 
-      {/* <div className="flex justify-evenly mt-16 text-center">
+      <div className="flex justify-evenly mt-16 text-center">
         <div>
-          <p className="text-8xl font-playfair text-black tracking-tighter">
+          <p className="text-5xl md:text-7xl lg:text-8xl font-playfair text-black tracking-tighter">
             127+
           </p>
-          <p className="text-sm text-black/60 mt-4">Connection</p>
+          <p className="text-xs md:text-sm text-black/60 mt-4">Connection</p>
         </div>
         <div>
-          <p className="text-8xl font-playfair text-black tracking-tighter">
+          <p className="text-5xl md:text-7xl lg:text-8xl font-playfair text-black tracking-tighter">
             400
           </p>
-          <p className="text-sm text-black/60 mt-4">Members</p>
+          <p className="text-xs md:text-sm text-black/60 mt-4">Members</p>
         </div>
         <div>
-          <p className="text-8xl font-playfair text-black tracking-tighter">
+          <p className="text-5xl md:text-7xl lg:text-8xl font-playfair text-black tracking-tighter">
             854
           </p>
-          <p className="text-sm text-black/60 mt-4">Projects</p>
+          <p className="text-xs md:text-sm text-black/60 mt-4">Projects</p>
         </div>
-      </div> */}
+      </div>
 
-      <div className="grid grid-cols-3 gap-8 mt-12 text-black/50 text-sm tracking-tight leading-loose">
+      <div className="grid grid-rows-3 md:grid-cols-3 gap-6 md:gap-8 mt-16 text-black/50 text-xs md:text-sm tracking-tight leading-loose">
         <div>
-          <h1 className="font-playfair text-4xl text-black/90">Wear Our Art</h1>
+          <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-black/90">Wear Our Art</h1>
           <p className="mt-6">
             Every piece has a story waiting to be told- one that embodies grace,
             beauty and the joy of celebration.
           </p>
         </div>
         <div>
-          <h1 className="font-playfair text-4xl text-black/90">Our Vision</h1>
+          <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-black/90">Our Vision</h1>
           <p className="mt-6">
             Redefining fashion by fusing heritage with modern silhouettes,
             creating timeless pieces that inspire confidence and celebrate
@@ -52,7 +52,7 @@ export default function StatsSection() {
           </p>
         </div>
         <div>
-          <h1 className="font-playfair text-4xl text-black/90">
+          <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-black/90">
             Labor Of Love
           </h1>
           <p className="mt-6">
