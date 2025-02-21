@@ -2,40 +2,40 @@
 
 import React, { useEffect, useState } from "react";
 
-// interface Testimonial {
-//   id: number;
-//   Name: string;
-//   Testimonial: string;
-//   Image: {
-//     url: string;
-//   };
-// }
+interface Testimonial {
+  id: number;
+  Name: string;
+  Testimonial: string;
+  Image: {
+    url: string;
+  };
+}
 
 export default function Testimonials() {
-  // const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
 
-  // useEffect(() => {
-  //   const fetchBlogs = async () => {
-  //     try {
-  //       // Fetch Testimonials
-  //       const testimonials = await fetch(
-  //         "http://localhost:1337/api/testimonials?populate=*"
-  //       );
-  //       const TestimonialData = await testimonials.json();
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        // Fetch Testimonials
+        const testimonials = await fetch(
+          "http://localhost:1337/api/testimonials?populate=*"
+        );
+        const TestimonialData = await testimonials.json();
 
-  //       if (TestimonialData.data) {
-  //         setTestimonials(TestimonialData.data);
-  //       }
-  //     } catch (error) {
-  //       console.error("Error fetching testimonials:", error);
-  //     }
-  //   };
+        if (TestimonialData.data) {
+          setTestimonials(TestimonialData.data);
+        }
+      } catch (error) {
+        console.error("Error fetching testimonials:", error);
+      }
+    };
 
-  //   fetchBlogs();
-  // }, []);
+    fetchTestimonials();
+  }, []);
 
   return (
-    <div className="h-[80dvh] mt-20 flex flex-col">
+    <div className="h-fit mt-20 flex flex-col">
       <div className="font-playfair flex flex-col justify-end px-[5%] md:px-[10%] lg:px-[20%] text-5xl md:text-7xl lg:text-8xl text-secondary tracking-tighter text-right">
         <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium">
           Testimonial
@@ -49,36 +49,40 @@ export default function Testimonials() {
           Clients
         </p>
       </div>
-      <div className="px-[5%] mt-4 lg:mt-12 flex justify-center items-center h-full text-3xl md:text-5xl lg:text-6xl font-playfair text-primary italic">
+      {/* <div className="px-[5%] mt-4 lg:mt-12 flex justify-center items-center h-full text-3xl md:text-5xl lg:text-6xl font-playfair text-primary italic">
         Testimonials *
-      </div>
-      {/* <div className="h-[500px] overflow-x-auto whitespace-nowrap mt-16 px-5 scrollbar-hide">
-        <div className="flex gap-8">
-          {testimonials.map((post) => {
+      </div> */}
+      <div className="my-40 px-8 relative w-full overflow-hidden">
+        <div className="flex w-fit gap-8 animate-scroll">
+          {[...testimonials, ...testimonials].map((post, index) => {
             const postImageUrl = `http://localhost:1337${post.Image.url}`;
             return (
-                <div
-                  key={post.id}
-                  className="bg-[#D0C1AE] rounded-lg p-6 w-[350px] shadow-lg flex flex-col justify-between relative"
-                >
-                  <p className="text-lg text-white italic">
-                    &ldquo;{post.Testimonial}&rdquo;
-                  </p>
-                <div className="absolute bottom-0 left-0 bg-quaternary flex items-center mt-4">
+              <div
+                key={index}
+                className="bg-secondary rounded-3xl p-6 h-[400px] w-[400px] flex flex-col justify-between relative"
+              >
+                <p className="h-full font-sen text-2xl text-white italic whitespace-normal flex justify-center items-center text-center">
+                  {post.Testimonial}
+                </p>
+                <img
+                  src="/testimonial.svg"
+                  className="w-12 h-12 absolute top-8 left-6"
+                />
+                <div className="absolute bottom-0 left-0 bg-quaternary flex items-center px-4 py-2 w-fit rounded-tr-3xl">
                   <img
                     src={postImageUrl}
                     alt={post.Name}
-                    className="w-10 h-10 rounded-full border-2 border-white"
+                    className="w-10 h-10 rounded-full border border-secondary"
                   />
-                  <p className="ml-3 text-sm font-semibold text-white">
-                    {post.Name}
-                  </p>
+                  <div className="ml-3">
+                    <p className="font-sen text-base text-quinary">{post.Name}</p>
+                  </div>
                 </div>
-                </div>
+              </div>
             );
           })}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

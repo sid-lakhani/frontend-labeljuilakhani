@@ -2,19 +2,19 @@ import React from "react";
 
 export default function StatsSection() {
   return (
-    <div className="min-h-fit w-screen py-[5%] px-[15%]">
-      <div className="flex flex-row justify-center items-center w-full">
-        <h1 className="w-1/2 font-playfair text-4xl text-black/90 traicking-tighter">
+    <div className="min-h-fit w-screen py-20 px-5 md:px-[15%]">
+      <div className="flex flex-col md:flex-row justify-center items-center w-full gap-4 md:gap-0">
+        <h1 className="w-full md:w-1/2 font-playfair text-2xl md:text-3xl lg:text-4xl text-black/90 traicking-tighter">
           A celebration of craftsmanship, heritage and timeless elegance.
         </h1>
-        <h2 className="w-1/2 font-sen text-xl text-black/90 leading-relaxed tracking-tight">
+        <h2 className="w-full md:w-1/2 font-sen text-base md:text-lg lg:text-xl text-black/90 leading-relaxed tracking-tight">
           A label that seamlessly blends tradition with modernity, creating
           exquisite collections that speaks to today’s confident, edgy and
           culturally rooted individuals.
         </h2>
       </div>
 
-      <div className="flex justify-evenly mt-16 text-center">
+      {/* <div className="flex justify-evenly mt-16 text-center">
         <div>
           <p className="text-8xl font-playfair text-black tracking-tighter">
             127+
@@ -33,7 +33,7 @@ export default function StatsSection() {
           </p>
           <p className="text-sm text-black/60 mt-4">Projects</p>
         </div>
-      </div>
+      </div> */}
 
       <div className="grid grid-cols-3 gap-8 mt-12 text-black/50 text-sm tracking-tight leading-loose">
         <div>
