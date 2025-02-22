@@ -17,7 +17,7 @@ export default function FeaturedLookbooks() {
     const fetchCollection = async () => {
       try {
         const response = await fetch(
-          "http://10.0.0.54:1337/api/collections?populate=*"
+          "http://localhost:1337/api/collections?populate=*"
         );
         const data = await response.json();
         if (data.data && data.data.length > 0) {
@@ -32,7 +32,7 @@ export default function FeaturedLookbooks() {
   }, []);
 
   const imageUrl = collection
-    ? `http://10.0.0.54:1337${collection.CoverImageLookbook.url}`
+    ? `http://localhost:1337${collection.CoverImageLookbook.url}`
     : "";
 
   return (

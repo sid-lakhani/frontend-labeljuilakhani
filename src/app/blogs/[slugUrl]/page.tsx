@@ -27,7 +27,7 @@ export default function BlogPage() {
     const fetchBlog = async () => {
       try {
         const res = await fetch(
-          `http://10.0.0.54:1337/api/blogs?filters[slugUrl][$eq]=${slugUrl}&populate=*`
+          `http://localhost:1337/api/blogs?filters[slugUrl][$eq]=${slugUrl}&populate=*`
         );
         const data = await res.json();
         if (data.data && data.data.length > 0) {
@@ -49,7 +49,7 @@ export default function BlogPage() {
     );
   }
 
-  const imageUrl = `http://10.0.0.54:1337${blog.headImage.url}`;
+  const imageUrl = `http://localhost:1337${blog.headImage.url}`;
 
   return (
     <>

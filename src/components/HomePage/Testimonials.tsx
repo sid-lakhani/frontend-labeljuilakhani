@@ -19,7 +19,7 @@ export default function Testimonials() {
     const fetchTestimonials = async () => {
       try {
         const response = await fetch(
-          "http://10.0.0.54:1337/api/testimonials?populate=*"
+          "http://localhost:1337/api/testimonials?populate=*"
         );
         const data = await response.json();
 
@@ -63,7 +63,7 @@ export default function Testimonials() {
           }}
         >
           {[...testimonials, ...testimonials].map((post, index) => {
-            const postImageUrl = `http://10.0.0.54:1337${post.Image.url}`;
+            const postImageUrl = `http://localhost:1337${post.Image.url}`;
             return (
               <div
                 key={index}

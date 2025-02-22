@@ -24,7 +24,7 @@ export default function BlogSection() {
       try {
         // Fetch Featured Blog
         const featuredRes = await fetch(
-          "http://10.0.0.54:1337/api/blogs?filters[isFeatured][$eq]=true&populate=*"
+          "http://localhost:1337/api/blogs?filters[isFeatured][$eq]=true&populate=*"
         );
         const featuredData = await featuredRes.json();
 
@@ -34,7 +34,7 @@ export default function BlogSection() {
 
         // Fetch Other Blogs
         const otherRes = await fetch(
-          "http://10.0.0.54:1337/api/blogs?filters[isFeatured][$eq]=false&populate=*"
+          "http://localhost:1337/api/blogs?filters[isFeatured][$eq]=false&populate=*"
         );
         const otherData = await otherRes.json();
 
@@ -49,7 +49,7 @@ export default function BlogSection() {
     fetchBlogs();
   }, []);
 
-  const imageUrl = `http://10.0.0.54:1337${featuredBlog?.coverImage.url}`;
+  const imageUrl = `http://localhost:1337${featuredBlog?.coverImage.url}`;
 
   return (
     <div className="min-h-screen w-screen py-[5%] px-[5%] md:px-[10%] lg:px-[20%] pt-28 md:pt-40">
@@ -87,7 +87,7 @@ export default function BlogSection() {
       {/* Other Blogs */}
       <div className="grid grid-rows-1 md:grid-cols-2 gap-12 md:gap-4 lg:gap-8 mt-12 md:mt-16">
         {otherBlogs.map((post) => {
-          const coverImageUrl = `http://10.0.0.54:1337${post.coverImage.url}`;
+          const coverImageUrl = `http://localhost:1337${post.coverImage.url}`;
           return (
             <div key={post.id} className="flex flex-col border border-black/10">
               <img

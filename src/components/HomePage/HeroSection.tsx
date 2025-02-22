@@ -10,13 +10,13 @@ export default function HeroSection() {
     async function fetchHomeImage() {
       try {
         const res = await fetch(
-          "http://10.0.0.54:1337/api/collections?filters[isLive][$eq]=true&populate=*"
+          "http://localhost:1337/api/collections?filters[isLive][$eq]=true&populate=*"
         );
         const data = await res.json();
         const imageUrl = data?.data?.[0]?.HomePageIfLive?.url;
 
         if (imageUrl) {
-          setHomeImage(`http://10.0.0.54:1337${imageUrl}`);
+          setHomeImage(`http://localhost:1337${imageUrl}`);
         }
       } catch (error) {
         console.error("Error fetching home image:", error);
