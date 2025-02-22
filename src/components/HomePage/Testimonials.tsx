@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 interface Testimonial {
   id: number;
@@ -17,14 +18,13 @@ export default function Testimonials() {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        // Fetch Testimonials
-        const testimonials = await fetch(
-          "http://localhost:1337/api/testimonials?populate=*"
+        const response = await fetch(
+          "http://10.0.0.54:1337/api/testimonials?populate=*"
         );
-        const TestimonialData = await testimonials.json();
+        const data = await response.json();
 
-        if (TestimonialData.data) {
-          setTestimonials(TestimonialData.data);
+        if (data.data) {
+          setTestimonials(data.data);
         }
       } catch (error) {
         console.error("Error fetching testimonials:", error);
@@ -36,6 +36,7 @@ export default function Testimonials() {
 
   return (
     <div className="h-fit mt-20 flex flex-col">
+      {/* Heading Section */}
       <div className="font-playfair flex flex-col justify-end px-[5%] md:px-[10%] lg:px-[20%] text-5xl md:text-7xl lg:text-8xl text-secondary tracking-tighter text-right">
         <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium">
           Testimonial
@@ -49,19 +50,26 @@ export default function Testimonials() {
           Clients
         </p>
       </div>
-      {/* <div className="px-[5%] mt-4 lg:mt-12 flex justify-center items-center h-full text-3xl md:text-5xl lg:text-6xl font-playfair text-primary italic">
-        Testimonials *
-      </div> */}
+
+      {/* Testimonials Scrolling Section */}
       <div className="my-20 lg:my-40 px-8 relative w-full overflow-hidden">
-        <div className="flex w-fit gap-8 animate-scroll">
+        <motion.div
+          className="flex gap-8 w-fit"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            ease: "linear",
+            duration: 30,
+            repeat: Infinity,
+          }}
+        >
           {[...testimonials, ...testimonials].map((post, index) => {
-            const postImageUrl = `http://localhost:1337${post.Image.url}`;
+            const postImageUrl = `http://10.0.0.54:1337${post.Image.url}`;
             return (
               <div
                 key={index}
                 className="bg-secondary rounded-3xl p-6 h-[250px] md:h-[300px] lg:h-[400px] w-[250px] md:w-[300px] lg:w-[400px] flex flex-col justify-between relative"
               >
-                <p className="h-full font-sen text-base md:text-lg lg:text-2xl text-white italic whitespace-normal flex justify-center items-center text-center">
+                <p className="h-full font-sen text-base md:text-lg lg:text-2xl text-white italic flex justify-center items-center text-center">
                   {post.Testimonial}
                 </p>
                 <img
@@ -74,14 +82,14 @@ export default function Testimonials() {
                     alt={post.Name}
                     className="w-6 md:w-8 lg:w-10 h-6 md:h-8 lg:h-10 rounded-full border border-secondary"
                   />
-                  <div className="ml-3">
-                    <p className="font-sen text-xs md:text-sm lg:text-base text-quinary">{post.Name}</p>
-                  </div>
+                  <p className="font-sen text-xs md:text-sm lg:text-base text-quinary ml-3">
+                    {post.Name}
+                  </p>
                 </div>
               </div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

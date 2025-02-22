@@ -24,7 +24,7 @@ export default function BlogSection() {
       try {
         // Fetch Featured Blog
         const featuredRes = await fetch(
-          "http://localhost:1337/api/blogs?filters[isFeatured][$eq]=true&populate=*"
+          "http://10.0.0.54:1337/api/blogs?filters[isFeatured][$eq]=true&populate=*"
         );
         const featuredData = await featuredRes.json();
 
@@ -34,7 +34,7 @@ export default function BlogSection() {
 
         // Fetch Other Blogs
         const otherRes = await fetch(
-          "http://localhost:1337/api/blogs?filters[isFeatured][$eq]=false&populate=*"
+          "http://10.0.0.54:1337/api/blogs?filters[isFeatured][$eq]=false&populate=*"
         );
         const otherData = await otherRes.json();
 
@@ -49,35 +49,35 @@ export default function BlogSection() {
     fetchBlogs();
   }, []);
 
-  const imageUrl = `http://localhost:1337${featuredBlog?.coverImage.url}`;
+  const imageUrl = `http://10.0.0.54:1337${featuredBlog?.coverImage.url}`;
 
   return (
-    <div className="min-h-screen w-screen py-[5%] px-[20%] pt-40">
-      <p className="text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-black/80">
+    <div className="min-h-screen w-screen py-[5%] px-[5%] md:px-[10%] lg:px-[20%] pt-28 md:pt-40">
+      <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-black/80">
         Our Blog
       </p>
-      <p className="text-8xl font-playfair text-black/80 tracking-tighter mt-2">
+      <p className="text-6xl md:text-7xl lg:text-8xl font-playfair text-black/80 tracking-tighter mt-2">
         Editorials
       </p>
 
       {/* Featured Blog */}
-      <div className="w-full h-[700px] mt-16 flex flex-row bg-tertiary text-quaternary">
+      <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] mt-8 md:mt-16 flex flex-row bg-tertiary text-quaternary">
         <img
           src={imageUrl}
           alt="featured-blog"
           className="w-1/2 h-full object-cover bg-primary"
         />
-        <div className="w-1/2 h-full flex flex-col justify-center px-[5%] gap-4">
-          <p className="text-sm uppercase tracking-[0.5em] font-montserrat font-medium">
+        <div className="w-1/2 h-full flex flex-col justify-center px-2 md:px-[5%] gap-4">
+          <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium">
             Featured
           </p>
-          <h1 className="font-playfair text-5xl">{featuredBlog?.Title}</h1>
-          <p className="text-sm ml-1 tracking-[0.5em] uppercase font-montserrat font-medium">
+          <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl">{featuredBlog?.Title}</h1>
+          <p className="text-xs md:text-sm ml-1 tracking-[0.5em] uppercase font-montserrat font-medium">
             {featuredBlog?.BlogDate}
           </p>
-          <p className="font-sen text-sm">{featuredBlog?.shortDescription}</p>
+          <p className="font-sen text-xs md:text-sm">{featuredBlog?.shortDescription}</p>
           <Link href={`/blogs/${featuredBlog?.slugUrl}`}>
-            <button className="bg-quaternary text-tertiary border border-black/80 font-montserrat font-bold text-xs px-4 py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary">
+            <button className="bg-quaternary text-tertiary border border-black/80 font-montserrat font-bold text-xs px-2 py-1 md:px-4 md:py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary">
               Read More
             </button>
           </Link>
@@ -85,28 +85,28 @@ export default function BlogSection() {
       </div>
 
       {/* Other Blogs */}
-      <div className="grid grid-cols-2 gap-8 mt-16">
+      <div className="grid grid-rows-1 md:grid-cols-2 gap-12 md:gap-4 lg:gap-8 mt-12 md:mt-16">
         {otherBlogs.map((post) => {
-          const postImageUrl = `http://localhost:1337${post.coverImage.url}`;
+          const coverImageUrl = `http://10.0.0.54:1337${post.coverImage.url}`;
           return (
             <div key={post.id} className="flex flex-col border border-black/10">
               <img
-                src={postImageUrl}
+                src={coverImageUrl}
                 alt="blog"
-                className="w-full h-full object-contain"
+                className="w-full h-[300px] md:h-full object-cover md:object-contain"
               />
-              <div className="p-8">
-                <p className="text-sm mt-6 tracking-[0.5em] uppercase font-montserrat font-medium">
+              <div className="p-4 md:p-8">
+                <p className="text-xs md:text-sm md:mt-6 tracking-[0.5em] uppercase font-montserrat font-medium">
                   {post.BlogDate}
                 </p>
-                <h2 className="font-playfair text-5xl text-primary mt-4 leading-[3.5rem]">
+                <h2 className="font-playfair text-4xl md:text-3xl lg:text-5xl text-primary md:mt-4 leading-[3.5rem]">
                   {post.Title}
                 </h2>
-                <p className="text-sm font-sen text-black/60 mt-6">
+                <p className="text-xs md:text-sm font-sen text-black/60 md:mt-6">
                   By Jui Lakhani
                 </p>
                 <Link href={`/blogs/${post.slugUrl}`}>
-                  <button className="bg-quaternary text-tertiary border border-black/80 font-montserrat font-bold text-xs px-4 py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary mt-6">
+                  <button className="bg-quaternary text-tertiary border border-black/80 font-montserrat font-bold text-xs px-2 md:px-4 py-1 md:py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary mt-4 md:mt-6">
                     Read More
                   </button>
                 </Link>

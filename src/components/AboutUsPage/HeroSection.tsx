@@ -25,7 +25,7 @@ export default function HeroSection() {
           <p className="text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-black/80">
             Meet THE FOUNDER
           </p>
-          <p className="text-3xl md:text-4xl lg:text-5xl font-playfair text-black/80 tracking-tighter md:mt-2">
+          <p className="text-4xl lg:text-5xl font-playfair text-black/80 tracking-tighter md:mt-2">
             Crafted with love, worn with grace.
           </p>
           <div>

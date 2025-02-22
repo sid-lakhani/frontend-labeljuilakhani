@@ -27,7 +27,7 @@ export default function BlogPage() {
     const fetchBlog = async () => {
       try {
         const res = await fetch(
-          `http://localhost:1337/api/blogs?filters[slugUrl][$eq]=${slugUrl}&populate=*`
+          `http://10.0.0.54:1337/api/blogs?filters[slugUrl][$eq]=${slugUrl}&populate=*`
         );
         const data = await res.json();
         if (data.data && data.data.length > 0) {
@@ -49,28 +49,29 @@ export default function BlogPage() {
     );
   }
 
-  const imageUrl = `http://localhost:1337${blog.headImage.url}`;
+  const imageUrl = `http://10.0.0.54:1337${blog.headImage.url}`;
 
   return (
     <>
       <Header />
-      <div className="min-h-full py-[5%] px-[20%] pt-40">
-        <div className="flex flex-col justify-center items-center">
-          <img src={imageUrl} alt="blog" className="h-96 object-cover" />
-          <div className="mt-8 text-center">
-            <h1 className="text-5xl font-playfair text-black/80 mt-2">
-              {blog.Title}
-            </h1>
-            <p className="text-sm text-black/60 mt-2">{blog.BlogDate}</p>
-            <div className="mt-4">
-              <p className="text-lg font-sen">{blog.BlogContent}</p>
-            </div>
-            <Link href="/blogs">
-              <button className="mt-6 bg-quaternary text-tertiary border border-black/80 font-montserrat font-bold text-xs px-4 py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary">
-                Back to Blogs
-              </button>
-            </Link>
+      <div className="min-h-full py-[5%] px-[5%] md:px-[10%] lg:px-[20%] pt-28 md:pt-40">
+        <div className="flex flex-col justify-center gap-8">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair text-black/80 mt-2">
+            {blog.Title}
+          </h1>
+          <div className="flex flex-row justify-start gap-8 text-sm text-black/60">
+            <p>{blog.BlogDate}</p>
+            <p>Jui Lakhani</p>
           </div>
+          <img src={imageUrl} alt="blog" className="w-full object-contain" />
+          <div className="mt-4">
+            <p className="text-lg font-sen">{blog.BlogContent}</p>
+          </div>
+          <Link href="/blogs">
+            <button className="mb-8 bg-quaternary text-tertiary border border-black/80 font-montserrat font-bold text-xs px-4 py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary">
+              Back to Blogs
+            </button>
+          </Link>
         </div>
       </div>
       <Footer />

@@ -22,24 +22,24 @@ export default function Footer() {
       <div className="flex flex-row items-start justify-center md:justify-evenly gap-10 md:gap-20 lg:gap-40 uppercase font-montserrat text-[10px] md:text-[8px] lg:text-[10px]">
         <div className="flex flex-col gap-3 md:gap-4">
           <h1 className="font-bold text-xs lg:text-sm">Quick Links</h1>
-          <Link href="/">Home</Link>
-          <Link href="/about">About Us</Link>
-          <Link href="/lookbook">Lookbooks</Link>
-          <Link href="/shop">Shop</Link>
-          <Link href="/blogs">Blogs</Link>
-          <Link href="/customs">Customs</Link>
+          <Link className="hover:underline" href="/">Home</Link>
+          <Link className="hover:underline" href="/about">About Us</Link>
+          <Link className="hover:underline" href="/lookbook">Lookbooks</Link>
+          <Link className="hover:underline" href="/shop">Shop</Link>
+          <Link className="hover:underline" href="/blogs">Blogs</Link>
+          <Link className="hover:underline" href="/customs">Customs</Link>
         </div>
         <div className="flex flex-col gap-4 md:gap-6">
           <h1 className="font-bold text-xs lg:text-sm">Socials</h1>
-          <Link href="/">Instagram</Link>
-          <Link href="/">Social 2</Link>
-          <Link href="/">Social 3</Link>
-          <Link href="/">Social 4</Link>
+          <Link className="hover:underline" href="/">Instagram</Link>
+          <Link className="hover:underline" href="/">Social 2</Link>
+          <Link className="hover:underline" href="/">Social 3</Link>
+          <Link className="hover:underline" href="/">Social 4</Link>
         </div>
         <div className="flex flex-col gap-4 md:gap-6">
           <h1 className="font-bold text-xs lg:text-sm">Transparency</h1>
-          <Link href="/">Pricing</Link>
-          <Link href="/">FAQs</Link>
+          <Link className="hover:underline" href="/">Pricing</Link>
+          <Link className="hover:underline" href="/">FAQs</Link>
         </div>
       </div>
     </div>
