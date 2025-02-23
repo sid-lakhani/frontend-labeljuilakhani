@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { useParams } from "next/navigation"; // Import useParams from next/navigation
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MarkdownRenderer from "@/components/BlogsPage/MarkdownRenderer";
 
 interface Blog {
   id: number;
@@ -19,10 +20,10 @@ interface Blog {
 
 export default function BlogPage() {
   const [blog, setBlog] = useState<Blog | null>(null);
-  const { slugUrl } = useParams(); // Access slugUrl from the dynamic route parameter
+  const { slugUrl } = useParams();
 
   useEffect(() => {
-    if (!slugUrl) return; // If no slugUrl, do nothing
+    if (!slugUrl) return;
 
     const fetchBlog = async () => {
       try {
@@ -31,7 +32,7 @@ export default function BlogPage() {
         );
         const data = await res.json();
         if (data.data && data.data.length > 0) {
-          setBlog(data.data[0]); // Set blog data if found
+          setBlog(data.data[0]);
         } else {
           console.error("No blog found for this slugUrl:", slugUrl);
         }
@@ -41,7 +42,7 @@ export default function BlogPage() {
     };
 
     fetchBlog();
-  }, [slugUrl]); // Re-run the effect when slugUrl changes
+  }, [slugUrl]);
 
   if (!blog) {
     return (
@@ -65,7 +66,9 @@ export default function BlogPage() {
           </div>
           <img src={imageUrl} alt="blog" className="w-full object-contain" />
           <div className="mt-4">
-            <p className="text-lg font-sen">{blog.BlogContent}</p>
+            <div className="text-lg font-sen">
+              <MarkdownRenderer content={blog.BlogContent} />
+            </div>
           </div>
           <Link href="/blogs">
             <button className="mb-8 bg-quaternary text-tertiary border border-black/80 font-montserrat font-bold text-xs px-4 py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary">
