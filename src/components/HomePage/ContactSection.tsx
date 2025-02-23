@@ -4,7 +4,7 @@ export default function ContactSection() {
   return (
     <div className="h-fit px-[5%] md:px-[10%] lg:px-[5%] flex flex-col md:flex-row items-center justify-center my-12 md:my-20 gap-4 md:gap-8 lg:gap-24">
       <img
-        src={"/logo.png"}
+        src={"/logo.webp"}
         alt="Contact"
         className="w-[250px] md:w-[300px] lg:w-[500px] bg-primary"
       />

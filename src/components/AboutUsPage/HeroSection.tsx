@@ -13,7 +13,7 @@ export default function HeroSection() {
       <div className="flex flex-col md:flex-row justify-center gap-12 mt-12">
         <div className="md:w-1/2 flex flex-col justify-evenly gap-4">
           <img
-            src="/Portrait.png"
+            src="/Portrait.webp"
             alt="Portrait"
             className="object-contain rounded-xl bg-secondary w-full"
           />

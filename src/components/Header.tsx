@@ -5,7 +5,7 @@ export default function Header() {
     <div className="fixed top-[3%] left-[3%] w-[94%] h-[8%] flex items-center bg-quinary/50 backdrop-blur-xl shadow-lg rounded-lg px-4 lg:px-8 z-[999]">
       <Link href="/" className="flex items-center">
         <img
-          src="/Header.png"
+          src="/Header.webp"
           alt="Logo"
           className="w-[150px] lg:w-[200px] md:w-[175px] object-contain"
         />
