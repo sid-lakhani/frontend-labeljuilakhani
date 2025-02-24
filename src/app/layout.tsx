@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Montserrat, PlayfairDisplay, Moontime, Sen } from "@/lib/fonts";
+import { Montserrat, PlayfairDisplay, Moontime, Sen, Kenao } from "@/lib/fonts";
 
 export default function RootLayout({
   children,
@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className= {`select-none ${Montserrat.variable} ${PlayfairDisplay.variable} ${Moontime.variable} ${Sen.variable} bg-quaternary antialiased`}
+        className= {`select-none ${Montserrat.variable} ${PlayfairDisplay.variable} ${Kenao.variable} ${Moontime.variable} ${Sen.variable} bg-quaternary antialiased`}
       >
         {children}
       </body>

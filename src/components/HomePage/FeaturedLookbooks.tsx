@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 interface Collection {
   Title: string;
+  titleSlugUrl: string;
   CoverImageLookbook: {
     url: string;
   };
@@ -40,7 +41,7 @@ export default function FeaturedLookbooks() {
       className={`relative h-[200px] md:h-[400px] lg:h-[600px] bg-secondary text-7xl flex items-center justify-center text-quaternary`}
     >
       {collection ? (
-        <Link href={`/lookbook/${collection.Title}`} className="relative w-full h-full">
+        <Link href={`/lookbook/${collection.titleSlugUrl}`} className="relative w-full h-full">
           <img
             src={imageUrl}
             alt={collection.Title}

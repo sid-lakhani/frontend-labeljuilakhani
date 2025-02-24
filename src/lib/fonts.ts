@@ -55,6 +55,12 @@ export const Sen = localFont({
   ], variable: "--font-sen",
 });
 
+// Kenao
+export const Kenao = localFont({
+  src: "./font/Kenao.otf",
+  variable: "--font-kenao",
+});
+
 // Moontime
 export const Moontime = localFont({
   src: "./font/Moontime.ttf",

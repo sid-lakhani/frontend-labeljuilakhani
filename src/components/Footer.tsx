@@ -37,9 +37,9 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-4 md:gap-6">
           <h1 className="font-bold text-xs lg:text-sm">Transparency</h1>
-          <Link className="hover:underline" href="/">Terms and Conditions</Link>
-          <Link className="hover:underline" href="/">FAQs</Link>
-          <Link className="hover:underline" href="/">Shipping and Payments</Link>
+          <Link className="hover:underline" href="/pages/terms-and-conditions">Terms and Conditions</Link>
+          <Link className="hover:underline" href="/pages/frequently-asked-questions">FAQs</Link>
+          <Link className="hover:underline" href="/pages/shipping-and-payments">Shipping and Payments</Link>
         </div>
       </div>
     </div>

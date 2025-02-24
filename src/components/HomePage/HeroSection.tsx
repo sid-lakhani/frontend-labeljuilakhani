@@ -39,7 +39,7 @@ export default function HeroSection() {
       )}
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-quaternary font-playfair bg-black/30">
-        <p className="text-5xl md:text-7xl lg:text-9xl font-normal tracking-tight leading-[0.9] uppercase">
+        <p className="text-5xl font-kenao md:text-7xl lg:text-9xl font-normal tracking-tight leading-[0.9] uppercase">
           Evara
         </p>
         <p className="italic text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight leading-[0.9]">

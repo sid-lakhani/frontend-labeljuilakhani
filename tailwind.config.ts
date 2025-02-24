@@ -19,6 +19,7 @@ export default {
         montserrat: "var(--font-montserrat), sans-serif",
         playfair: "var(--font-playfair), serif",
         sen: "var(--font-sen), sans-serif",
+        kenao: "var(--font-kenao), sans-serif",
         moontime: "var(--font-moontime), cursive",
       },
     },
