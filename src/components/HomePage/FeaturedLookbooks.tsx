@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 interface Collection {
   Title: string;
   titleSlugUrl: string;
-  CoverImageLookbook: {
+  CoverImageLookbookIfLive: {
     url: string;
   };
 }
@@ -33,7 +33,7 @@ export default function FeaturedLookbooks() {
   }, []);
 
   const imageUrl = collection
-    ? `http://localhost:1337${collection.CoverImageLookbook.url}`
+    ? `http://localhost:1337${collection.CoverImageLookbookIfLive.url}`
     : "";
 
   return (
