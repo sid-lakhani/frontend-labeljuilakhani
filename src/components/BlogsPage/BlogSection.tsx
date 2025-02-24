@@ -93,7 +93,7 @@ export default function BlogSection() {
               <img
                 src={coverImageUrl}
                 alt="blog"
-                className="w-full h-[300px] md:h-full object-cover md:object-contain"
+                className="w-full h-[300px] md:h-full object-cover"
               />
               <div className="p-4 md:p-8">
                 <p className="text-xs md:text-sm md:mt-6 tracking-[0.5em] uppercase font-montserrat font-medium">

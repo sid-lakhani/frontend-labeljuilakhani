@@ -14,30 +14,25 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
         rehypePlugins={[rehypeRaw]}
         remarkPlugins={[remarkGfm]}
         components={{
-          h1: ({ children }) => <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl text-black/90 font-normal my-6">{children}</h1>,
-          h2: ({ children }) => <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-black/90 font-normal my-4">{children}</h2>,
-          h3: ({ children }) => <h3 className="font-playfair text-xl md:text-2xl lg:text-3xl text-black/90 font-normal my-2">{children}</h3>,
-          p: ({ children }) => <p className="font-sen text-xs md:text-base lg:text-lg leading-relaxed my-2">{children}</p>,
+          h1: ({ children }) => <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl text-black/90 font-normal my-10">{children}</h1>,
+          h2: ({ children }) => <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-black/90 font-normal my-8">{children}</h2>,
+          h3: ({ children }) => <h3 className="font-playfair text-xl md:text-2xl lg:text-3xl text-black/90 font-normal my-6">{children}</h3>,
+          p: ({ children }) => <p className="font-sen text-xs md:text-base lg:text-lg leading-relaxed my-6">{children}</p>,
           a: ({ href, children }) => (
-            <a href={href} className="text-blue-600 underline hover:text-blue-800">
+            <a href={href} className="text-blue-600 underline duration-200 transition-colors hover:text-blue-800">
               {children}
             </a>
           ),
-          ul: ({ children }) => <ul className="list-disc text-black/90  list-inside my-2">{children}</ul>,
-          ol: ({ children }) => <ol className="list-decimal text-black/90  list-inside my-2">{children}</ol>,
-          li: ({ children }) => <li className="my-1">{children}</li>,
+          ul: ({ children }) => <ul className="list-disc text-black/90 text-xs md:text-base lg:text-lg list-inside">{children}</ul>,
+          ol: ({ children }) => <ol className="list-decimal text-black/90 text-xs md:text-base lg:text-lg list-inside">{children}</ol>,
+          li: ({ children }) => <li className="my-1 text-xs md:text-base lg:text-lg ">{children}</li>,
           blockquote: ({ children }) => (
-            <blockquote className="border-l-4 border-primary pl-4 italic text-gray-600 my-4">
+            <blockquote className="border-l-4 border-primary pl-4 italic text-slate-700 my-4">
               {children}
             </blockquote>
           ),
-          code: ({ children }) => (
-            <code className="bg-gray-200 text-red-600 px-2 py-1 rounded-md font-mono">
-              {children}
-            </code>
-          ),
           pre: ({ children }) => (
-            <pre className="bg-gray-800 text-white p-4 rounded-md overflow-x-auto my-4">
+            <pre className="bg-slate-700 text-white px-2 py-1 rounded-md font-mono">
               {children}
             </pre>
           ),
