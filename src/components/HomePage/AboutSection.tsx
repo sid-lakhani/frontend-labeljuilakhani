@@ -12,7 +12,7 @@ export default function AboutSection() {
           Clothing <span className="text-4xl md:text-6xl lg:text-7xl lowercase text-secondary italic">we</span>
         </p>
         <p className="uppercase leading-[0.9]">
-          <span className="text-4xl md:text-6xl lg:text-7xl lowercase italic">create</span> <span className="underline"> Statements </span>
+          <span className="text-4xl md:text-6xl lg:text-7xl lowercase italic">create</span> <span className=""> Statements </span>
         </p>
       </div>
 
