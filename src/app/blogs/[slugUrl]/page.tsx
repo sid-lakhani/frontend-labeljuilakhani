@@ -65,11 +65,7 @@ export default function BlogPage() {
             <p>Jui Lakhani</p>
           </div>
           <img src={imageUrl} alt="blog" className="w-full object-contain" />
-          <div className="mt-4">
-            <div className="text-lg font-sen">
-              <MarkdownRenderer content={blog.BlogContent} />
-            </div>
-          </div>
+          <MarkdownRenderer content={blog.BlogContent} />
           <Link href="/blogs">
             <button className="mb-8 bg-quaternary text-tertiary border border-black/80 font-montserrat font-bold text-xs px-4 py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary">
               Back to Blogs

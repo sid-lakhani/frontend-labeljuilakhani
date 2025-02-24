@@ -9,10 +9,10 @@ export default function AboutSection() {
       <div className="text-5xl md:text-7xl lg:text-8xl font-playfair text-secondary tracking-tighter mt-2">
         <p className="leading-[0.9]">More than</p>
         <p className="uppercase text-primary leading-[0.9]">
-          Pictures <span className="lowercase text-secondary italic">we</span>
+          Clothing <span className="text-4xl md:text-6xl lg:text-7xl lowercase text-secondary italic">we</span>
         </p>
         <p className="uppercase leading-[0.9]">
-          <span className="lowercase italic">make</span> Fine Art
+          <span className="text-4xl md:text-6xl lg:text-7xl lowercase italic">create</span> <span className="underline"> Statements </span>
         </p>
       </div>
 

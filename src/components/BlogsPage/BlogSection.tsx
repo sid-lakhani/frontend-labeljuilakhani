@@ -53,21 +53,21 @@ export default function BlogSection() {
 
   return (
     <div className="min-h-screen w-screen py-[5%] px-[5%] md:px-[10%] lg:px-[20%] pt-28 md:pt-40">
-      <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-black/80">
-        Our Blog
+      <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-primary">
+        The Craft Journal
       </p>
-      <p className="text-6xl md:text-7xl lg:text-8xl font-playfair text-black/80 tracking-tighter mt-2">
-        Editorials
+      <p className="text-[40px] md:text-7xl lg:text-8xl font-playfair text-primary tracking-tighter mt-2">
+         <span className="">Art in </span>Every Thread
       </p>
 
       {/* Featured Blog */}
-      <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] mt-8 md:mt-16 flex flex-row bg-tertiary text-quaternary">
+      <div className="w-full h-[600px] md:h-[650px] lg:h-[700px] mt-8 md:mt-16 flex flex-col md:flex-row bg-tertiary text-quaternary">
         <img
           src={imageUrl}
           alt="featured-blog"
-          className="w-1/2 h-full object-cover bg-primary"
+          className="w-full md:w-1/2 h-1/2 md:h-full object-cover bg-primary"
         />
-        <div className="w-1/2 h-full flex flex-col justify-center px-2 md:px-[5%] gap-4">
+        <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col justify-center px-2 md:px-[5%] gap-2 md:gap-4 lg:gap-6">
           <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium">
             Featured
           </p>
@@ -77,7 +77,7 @@ export default function BlogSection() {
           </p>
           <p className="font-sen text-xs md:text-sm">{featuredBlog?.shortDescription}</p>
           <Link href={`/blogs/${featuredBlog?.slugUrl}`}>
-            <button className="bg-quaternary text-tertiary border border-black/80 font-montserrat font-bold text-xs px-2 py-1 md:px-4 md:py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary">
+            <button className="bg-quaternary text-tertiary border border-black/80 font-montserrat md:font-bold text-xs px-2 py-1 md:px-4 md:py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary">
               Read More
             </button>
           </Link>
@@ -99,7 +99,7 @@ export default function BlogSection() {
                 <p className="text-xs md:text-sm md:mt-6 tracking-[0.5em] uppercase font-montserrat font-medium">
                   {post.BlogDate}
                 </p>
-                <h2 className="font-playfair text-4xl md:text-3xl lg:text-5xl text-primary md:mt-4 leading-[3.5rem]">
+                <h2 className="font-playfair text-4xl md:text-3xl lg:text-5xl text-primary my-2 md:mt-4 leading-[2.5rem]">
                   {post.Title}
                 </h2>
                 <p className="text-xs md:text-sm font-sen text-black/60 md:mt-6">

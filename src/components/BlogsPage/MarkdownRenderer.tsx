@@ -14,7 +14,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
         rehypePlugins={[rehypeRaw]}
         remarkPlugins={[remarkGfm]}
         components={{
-          h1: ({ children }) => <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl text-black/90 font-normal my-10">{children}</h1>,
+          h1: ({ children }) => <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl text-black/90 font-normal mb-8">{children}</h1>,
           h2: ({ children }) => <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-black/90 font-normal my-8">{children}</h2>,
           h3: ({ children }) => <h3 className="font-playfair text-xl md:text-2xl lg:text-3xl text-black/90 font-normal my-6">{children}</h3>,
           p: ({ children }) => <p className="font-sen text-xs md:text-base lg:text-lg leading-relaxed my-6">{children}</p>,
@@ -32,7 +32,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
             </blockquote>
           ),
           pre: ({ children }) => (
-            <pre className="bg-slate-700 text-white px-2 py-1 text-xs md:text-base lg:text-lg rounded-md font-mono">
+            <pre className="bg-slate-700 text-quaternary px-2 py-1 text-xs md:text-base lg:text-lg rounded-md font-mono">
               {children}
             </pre>
           ),

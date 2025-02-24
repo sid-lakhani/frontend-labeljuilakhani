@@ -37,14 +37,14 @@ export default function FeaturedLookbooks() {
 
   return (
     <div
-      className={`h-[30dvh] lg:h-[50dvh] bg-secondary text-7xl flex items-center justify-center text-white`}
+      className={`h-[30dvh] lg:h-[50dvh] bg-secondary text-7xl flex items-center justify-center text-quaternary`}
     >
       {collection ? (
         // If collection data is available, show the image
         <img
           src={imageUrl}
           alt={collection.name}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
         />
       ) : (
         // If no collection data, display fallback content

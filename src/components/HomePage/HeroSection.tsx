@@ -38,24 +38,15 @@ export default function HeroSection() {
         <div className="w-full min-h-screen bg-primary"></div>
       )}
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white font-playfair">
-        {/* <p className="italic text-3xl md:text-6xl lg:text-8xl tracking-tighter leading-[0.9]">
-          Celebrated Couture
-        </p>
-        <p className="text-4xl md:text-7xl lg:text-9xl font-normal tracking-tight leading-[0.9] uppercase">
-          Ethnic Elegance
-        </p>
-        <p className="text-4xl md:text-7xl lg:text-9xl font-normal tracking-tight leading-[0.9] uppercase">
-          <span className="italic text-4xl md:text-6xl lg:text-8xl ">&</span> Design House
-        </p> */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-quaternary font-playfair bg-black/30">
         <p className="text-5xl md:text-7xl lg:text-9xl font-normal tracking-tight leading-[0.9] uppercase">
           Evara
         </p>
         <p className="italic text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight leading-[0.9]">
           The Wedding Edit ’24
         </p>
-        <Link href={"/customs"}>
-          <button className="mt-2 md:mt-4 lg:mt-8 px-6 lg:px-12 py-2 lg:py-4 border border-white text-white font-montserrat font-bold text-xs md:text-[10px] lg:text-sm rounded-full uppercase hover:underline">
+        <Link href={"/lookbook"}>
+          <button className="mt-2 md:mt-4 lg:mt-8 px-6 lg:px-12 py-2 lg:py-4 border border-quaternary text-quaternary font-montserrat font-bold text-xs md:text-[10px] lg:text-sm rounded-full uppercase hover:underline">
             Explore More
           </button>
         </Link>
