@@ -1,10 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface Collection {
-  name: string;
-  description: string | null;
+  Title: string;
   CoverImageLookbook: {
     url: string;
   };
@@ -17,7 +17,7 @@ export default function FeaturedLookbooks() {
     const fetchCollection = async () => {
       try {
         const response = await fetch(
-          "http://localhost:1337/api/collections?populate=*"
+          "http://localhost:1337/api/collections?filters[isLive][$eq]=true&populate=*"
         );
         const data = await response.json();
         if (data.data && data.data.length > 0) {
@@ -37,18 +37,24 @@ export default function FeaturedLookbooks() {
 
   return (
     <div
-      className={`h-[30dvh] lg:h-[50dvh] bg-secondary text-7xl flex items-center justify-center text-quaternary`}
+      className={`relative h-[200px] md:h-[400px] lg:h-[600px] bg-secondary text-7xl flex items-center justify-center text-quaternary`}
     >
       {collection ? (
-        // If collection data is available, show the image
-        <img
-          src={imageUrl}
-          alt={collection.name}
-          className="w-full h-full object-cover"
-        />
+        <Link href={`/lookbook/${collection.Title}`} className="relative w-full h-full">
+          <img
+            src={imageUrl}
+            alt={collection.Title}
+            className="w-full h-full object-cover"
+          />
+          <img
+            src={"/arrow.png"}
+            className="absolute top-[60%] lg:top-[70%] right-[10%] -translate-y-1/2 z-10 w-16 md:w-32 lg:w-40"
+          />
+        </Link>
       ) : (
-        // If no collection data, display fallback content
-        <p className="font-playfair italic text-quaternary p-4 text-2xl md:text-4xl lg:text-6xl">No featured collection available.</p>
+        <p className="font-playfair italic text-quaternary p-4 text-2xl md:text-4xl lg:text-6xl">
+          No featured collection available.
+        </p>
       )}
     </div>
   );

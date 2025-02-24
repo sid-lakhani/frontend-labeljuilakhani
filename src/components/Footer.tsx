@@ -31,17 +31,15 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-4 md:gap-6">
           <h1 className="font-bold text-xs lg:text-sm">Socials</h1>
-          <Link className="hover:underline" href="https://instagram.com/labeljuilakhani">Instagram</Link>
-          <Link className="hover:underline" href="/">Facebook</Link>
-          <Link className="hover:underline" href="/">LinkedIn</Link>
+          <Link className="hover:underline" href="https://instagram.com/labeljuilakhani" target="_blank">Instagram</Link>
+          <Link className="hover:underline" href="https://www.linkedin.com/in/jui-lakhani-604030226/" target="_blank">LinkedIn</Link>
+          <Link className="hover:underline" href="https://www.facebook.com/profile.php?id=61573638958217" target="_blank">Facebook</Link>
         </div>
-        <div className="flex flex-col gap-4 md:gap-4">
+        <div className="flex flex-col gap-4 md:gap-6">
           <h1 className="font-bold text-xs lg:text-sm">Transparency</h1>
           <Link className="hover:underline" href="/">Terms and Conditions</Link>
           <Link className="hover:underline" href="/">FAQs</Link>
-          <Link className="hover:underline" href="/">Privacy Policy</Link>
           <Link className="hover:underline" href="/">Shipping and Payments</Link>
-          <Link className="hover:underline" href="/">Cancellations and Refunds</Link>
         </div>
       </div>
     </div>
