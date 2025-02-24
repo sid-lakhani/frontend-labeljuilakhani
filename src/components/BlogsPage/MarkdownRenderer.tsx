@@ -27,19 +27,19 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
           ol: ({ children }) => <ol className="list-decimal text-black/90 text-xs md:text-base lg:text-lg list-inside">{children}</ol>,
           li: ({ children }) => <li className="my-1 text-xs md:text-base lg:text-lg ">{children}</li>,
           blockquote: ({ children }) => (
-            <blockquote className="border-l-4 border-primary pl-4 italic text-slate-700 my-4">
+            <blockquote className="border-l-4 border-primary text-xs md:text-base lg:text-lg pl-4 italic text-slate-700 my-4">
               {children}
             </blockquote>
           ),
           pre: ({ children }) => (
-            <pre className="bg-slate-700 text-white px-2 py-1 rounded-md font-mono">
+            <pre className="bg-slate-700 text-white px-2 py-1 text-xs md:text-base lg:text-lg rounded-md font-mono">
               {children}
             </pre>
           ),
-          del: ({ children }) => <del className="text-red-500">{children}</del>,
-          span: ({ children }) => <span className="underline">{children}</span>,
-          em: ({ children }) => <em className="italic">{children}</em>,
-          strong: ({ children }) => <strong className="text-black/90 font-bold">{children}</strong>,
+          del: ({ children }) => <del className="text-xs md:text-base lg:text-lg ">{children}</del>,
+          span: ({ children }) => <span className="underline text-xs md:text-base lg:text-lg">{children}</span>,
+          em: ({ children }) => <em className="italic text-xs md:text-base lg:text-lg ">{children}</em>,
+          strong: ({ children }) => <strong className="text-black/90 font-bold text-xs md:text-base lg:text-lg ">{children}</strong>,
         }}
       >
         {content}
