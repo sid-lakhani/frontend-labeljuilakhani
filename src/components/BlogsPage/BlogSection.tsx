@@ -61,21 +61,21 @@ export default function BlogSection() {
       </p>
 
       {/* Featured Blog */}
-      <div className="w-full h-[600px] md:h-[650px] lg:h-[700px] mt-8 md:mt-16 flex flex-col md:flex-row bg-tertiary text-quaternary">
+      <div className="w-full h-full md:h-[650px] lg:h-[700px] mt-8 md:mt-16 flex flex-col md:flex-row bg-tertiary text-quaternary">
         <img
           src={imageUrl}
           alt="featured-blog"
           className="w-full md:w-1/2 h-1/2 md:h-full object-cover bg-primary"
         />
-        <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col justify-center px-2 md:px-[5%] gap-2 md:gap-4 lg:gap-6">
-          <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium">
+        <div className="w-full py-4 md:w-1/2 h-1/2 md:h-full flex flex-col justify-center px-2 md:px-[5%] gap-2 md:gap-4 lg:gap-6">
+          <p className="text-[10px] md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium">
             Featured
           </p>
           <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl">{featuredBlog?.Title}</h1>
-          <p className="text-xs md:text-sm ml-1 tracking-[0.5em] uppercase font-montserrat font-medium">
+          <p className="text-[10px] md:text-sm ml-1 tracking-[0.5em] uppercase font-montserrat font-medium">
             {featuredBlog?.BlogDate}
           </p>
-          <p className="font-sen text-xs md:text-sm">{featuredBlog?.shortDescription}</p>
+          <p className="font-sen text-[10px] md:text-sm">{featuredBlog?.shortDescription}</p>
           <Link href={`/blogs/${featuredBlog?.slugUrl}`}>
             <button className="bg-quaternary text-tertiary border border-black/80 font-montserrat md:font-bold text-xs px-2 py-1 md:px-4 md:py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary">
               Read More

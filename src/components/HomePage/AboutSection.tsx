@@ -16,11 +16,11 @@ export default function AboutSection() {
         </p>
       </div>
 
-      <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl tracking-tight mt-12 lg:mt-20">
+      <h1 className="font-playfair text-black text-2xl md:text-3xl lg:text-4xl tracking-tight mt-12 lg:mt-20">
         Welcome to the world of Jui Lakhani, where every creation is crafted
         with love and designed to be uniquely yours!
       </h1>
-      <p className="font-sen text-sm md:text-base lg:text-lg mt-6 text-black/60 tracking-tight">
+      <p className="font-sen text-xs md:text-base lg:text-lg mt-6 text-black/60 tracking-tight">
         Our Label is built on a passion for fashion that is both creative and
         conscious. Whether you are looking for everyday essentials or a
         statement piece, we have something that speaks to your style. We are

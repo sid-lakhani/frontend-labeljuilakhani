@@ -35,43 +35,47 @@ export default function Lookbooks() {
   }, []);
 
   return (
-    <div className="min-h-screen w-screen py-[5%] px-[5%] md:px-[10%] lg:px-[20%] pt-28 md:pt-40">
+    <div className="min-h-screen w-screen py-[5%] px-[5%] md:px-[10%] lg:px-[25%] pt-28 md:pt-40">
       <div className="text-start mb-16">
-        <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-primary">
+        <p className="text-xs md:text-sm uppercase tracking-[0.3em] font-montserrat font-semibold text-primary">
           Lookbooks
         </p>
-        <p className="text-[40px] md:text-7xl lg:text-8xl font-playfair text-primary tracking-tighter mt-2">
-          Cultural Fashion Fusion
+        <p className="text-5xl md:text-6xl lg:text-7xl font-playfair text-primary tracking-tight mt-2 leading-tight">
+          Stories Woven in Fabric
         </p>
       </div>
 
-      <div className="flex flex-col gap-20">
+      <div className="flex flex-col gap-28 md:gap-20">
         {collections.map((collection, index) => {
-            const ImageUrl = `http://localhost:1337${collection.HomeImage.url}`;
+          const ImageUrl = `http://localhost:1337${collection.HomeImage.url}`;
           return (
             <div
               key={collection.id}
-              className={`flex flex-row gap-8 items-center ${
-                index % 2 === 0 ? "" : "flex-row-reverse"
+              className={`flex flex-col md:flex-row md:justify-evenly lg:justify-normal gap-8 md:gap-20 md:items-center ${
+                index % 2 === 0 ? "" : "md:flex-row-reverse"
               }`}
             >
               <div className="relative group">
                 <img
                   src={ImageUrl}
                   alt={collection.Title}
-                  className="h-[400px] w-[300px] md:h-[500px] md:w-[350px] lg:h-[700px] lg:w-[500px] object-cover"
+                  className="h-auto w-full md:h-[500px] md:w-[350px] lg:h-[650px] lg:w-[450px] object-cover"
                 />
               </div>
 
-              <div className="flex flex-col justify-center">
-                <p className="text-sm text-gray-500">{collection.Date}</p>
-                <h2 className="text-3xl md:text-4xl lg:text-7xl font-playfair text-primary mt-2">
+              <div className="w-auto flex flex-col justify-evenly text-left">
+                <p className="text-sm md:text-base text-black/60">
+                  {collection.Date}
+                </p>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair text-primary mt-2 leading-tight">
                   {collection.Title}
                 </h2>
-                <p className="text-gray-600 mt-4">{collection.Description}</p>
+                <p className="font-sen text-sm md:text-base lg:text-lg text-black/70 mt-4 leading-relaxed">
+                  {collection.Description}
+                </p>
                 <a
                   href={`/lookbook/${collection.titleSlugUrl}`}
-                  className="w-auto mt-6 inline-block text-sm font-medium uppercase tracking-wide text-primary border border-primary px-6 py-2 hover:bg-primary hover:text-white transition"
+                  className="w-fit text-center mt-6 inline-block text-sm md:text-base font-semibold uppercase tracking-wide text-primary border border-primary px-6 py-2 hover:bg-primary hover:text-white transition rounded-md"
                 >
                   Discover Fusion
                 </a>
