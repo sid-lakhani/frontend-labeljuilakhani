@@ -1,21 +1,53 @@
+import ContactForm from "@/components/CustomsPage/ContactForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import type { Metadata } from "next";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Customs | Label Jui Lakhani",
-  description: "Customs by Label Jui Lakhani",
+  title: "Contact Us | Label Juilakhani",
+  description: "Get in touch with us for inquiries and custom outfit requests.",
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen min-w-screen">
       <Header />
+      <div className="min-h-screen w-screen flex flex-col items-center py-[5%] px-[5%] md:px-[10%] lg:px-[20%] pt-28 md:pt-40">
+        <h1 className="font-playfair font-semibold text-[11vw] md:text-6xl lg:text-7xl text-primary">
+          Get in touch
+        </h1>
 
-      <div className="min-h-screen flex items-center justify-center">
-        Content goes here
+        {/* Contact Info */}
+        <div className="flex flex-col md:flex-row gap-4 md:gap-20 mt-8 md:mt-12 items-center text-center justify-between font-sen text-[3vw] md:text-lg lg:text-xl text-black/60">
+          <div className="flex flex-col">
+            <h1 className="font-playfair text-black mb-2 text-[6vw] md:text-2xl lg:text-3xl">Contact</h1>
+            <a href="mailto:labeljuilakhani@gmail.com" className="underline">labeljuilakhani@gmail.com</a>
+            <a href="tel:+918454948349" className="underline">+91 84549 48349</a>
+          </div>
+          <div className="flex flex-col">
+            <h1 className="font-playfair text-black mb-2 text-[6vw] md:text-2xl lg:text-3xl">Open Hours</h1>
+            <p>Monday - Saturday</p>
+            <p>9:00 am - 8:00 pm IST</p>
+          </div>
+          <div className="flex flex-col">
+            <h1 className="font-playfair text-black mb-2 text-[6vw] md:text-2xl lg:text-3xl">Location</h1>
+            <p>Vadodara, Gujarat</p>
+            <p>India</p>
+          </div>
+        </div>
+
+        {/* Inquiry Section */}
+        <div className="flex flex-col items-center text-center mt-8 md:mt-12 gap-4 md:gap-8">
+          <h1 className="font-playfair text-primary italic text-[10vw] md:text-5xl lg:text-6xl">Inquiries</h1>
+          <p className="font-sen text-[3vw] md:text-lg lg:text-xl text-black/60">
+            For any inquiries or custom outfit requests, please complete the
+            provided form, and our team will reach out to you promptly.
+          </p>
+
+          {/* Contact Form */}
+          <ContactForm />
+        </div>
       </div>
-
       <Footer />
     </div>
   );

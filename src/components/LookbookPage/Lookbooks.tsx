@@ -37,10 +37,10 @@ export default function Lookbooks() {
   return (
     <div className="min-h-screen w-screen py-[5%] px-[5%] md:px-[10%] lg:px-[25%] pt-28 md:pt-40">
       <div className="text-start mb-16">
-        <p className="text-xs md:text-sm uppercase tracking-[0.3em] font-montserrat font-semibold text-primary">
+        <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-primary">
           Lookbooks
         </p>
-        <p className="text-5xl md:text-6xl lg:text-7xl font-playfair text-primary tracking-tight mt-2 leading-tight">
+        <p className="text-[9vw] md:text-6xl lg:text-7xl font-playfair text-primary tracking-tight mt-2 leading-tight">
           Stories Woven in Fabric
         </p>
       </div>

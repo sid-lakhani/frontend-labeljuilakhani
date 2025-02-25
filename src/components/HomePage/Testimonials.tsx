@@ -34,7 +34,7 @@ export default function Testimonials() {
   return (
     <div className="h-fit mt-20 flex flex-col">
       {/* Heading Section */}
-      <div className="font-playfair flex flex-col justify-end px-[5%] md:px-[10%] lg:px-[20%] text-5xl md:text-7xl lg:text-8xl text-secondary tracking-tighter text-right">
+      <div className="font-playfair flex flex-col justify-end px-[5%] md:px-[10%] lg:px-[20%] text-[10vw] md:text-7xl lg:text-8xl text-secondary tracking-tighter text-right">
         <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium">
           Testimonial
         </p>

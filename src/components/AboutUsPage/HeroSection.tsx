@@ -6,7 +6,7 @@ export default function HeroSection() {
       {/* <p className="text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-black/80">
         Who we are
       </p> */}
-      <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair text-primary tracking-tighter md:ml-20 mt-2 italic">
+      <h1 className="text-[12vw] md:text-7xl lg:text-8xl font-playfair text-primary tracking-tighter md:ml-20 mt-2 italic">
       Behind the Label
       </h1>
 
@@ -20,7 +20,7 @@ export default function HeroSection() {
             alt="Portrait"
             className="object-contain rounded-xl bg-[#A18668] w-full"
           />
-          <p className="w-full bg-[#A18668] uppercase flex items-center justify-center p-4 rounded-xl font-playfair text-4xl md:text-5xl lg:text-6xl text-quaternary">
+          <p className="w-full bg-[#A18668] uppercase flex items-center justify-center p-4 rounded-xl font-playfair text-3xl md:text-4xl lg:text-5xl text-quaternary">
             Jui Lakhani
           </p>
         </div>
