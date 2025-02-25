@@ -56,7 +56,7 @@ export default function CollectionPage() {
           <img
             src={`http://localhost:1337${collection.Images[0].url}`} 
             alt={collection.Title}
-            className="w-40 max-w-4xl rounded-lg shadow-lg"
+            className="w-full max-w-4xl rounded-lg shadow-lg"
           />
         )}
       </div>

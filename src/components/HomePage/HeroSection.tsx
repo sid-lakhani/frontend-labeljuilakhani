@@ -13,7 +13,7 @@ export default function HeroSection() {
           "http://localhost:1337/api/collections?filters[isLive][$eq]=true&populate=*"
         );
         const data = await res.json();
-        const imageUrl = data?.data?.[0]?.HomePageIfLive?.url;
+        const imageUrl = data?.data?.[0]?.HomeImage?.url;
 
         if (imageUrl) {
           setHomeImage(`http://localhost:1337${imageUrl}`);
