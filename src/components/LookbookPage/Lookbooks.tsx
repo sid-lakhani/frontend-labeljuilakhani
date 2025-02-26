@@ -19,7 +19,7 @@ export default function Lookbooks() {
     const fetchCollections = async () => {
       try {
         const res = await fetch(
-          "http://localhost:1337/api/collections?populate=*"
+          `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/collections?populate=*`
         );
         const data = await res.json();
 
@@ -47,7 +47,7 @@ export default function Lookbooks() {
 
       <div className="flex flex-col gap-28 md:gap-20">
         {collections.map((collection, index) => {
-          const ImageUrl = `http://localhost:1337${collection.HomeImage.url}`;
+          const ImageUrl = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${collection.HomeImage.url}`;
           return (
             <div
               key={collection.id}

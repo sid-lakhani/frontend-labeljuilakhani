@@ -16,7 +16,7 @@ export default function Testimonials() {
     const fetchTestimonials = async () => {
       try {
         const response = await fetch(
-          "http://localhost:1337/api/testimonials?populate=*"
+          `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/testimonials?populate=*`
         );
         const data = await response.json();
 
