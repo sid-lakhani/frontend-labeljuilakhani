@@ -101,13 +101,13 @@ export default function CollectionPage() {
           <img
             src={`http://localhost:1337${collection.Images[prevIndex].url}`}
             alt="Previous Image"
-            className="w-[30vw] object-cover opacity-50 cursor-pointer hover:opacity-75 transition-opacity"
+            className="w-[30vw] object-cover opacity-60 cursor-pointer"
             onClick={() => setCurrentIndex(prevIndex)}
           />
           <img
             src={`http://localhost:1337${collection.Images[nextIndex].url}`}
             alt="Next Image"
-            className="w-[30vw] object-cover opacity-50 cursor-pointer hover:opacity-75 transition-opacity"
+            className="w-[30vw] object-cover opacity-60 cursor-pointer"
             onClick={() => setCurrentIndex(nextIndex)}
           />
         </div>
