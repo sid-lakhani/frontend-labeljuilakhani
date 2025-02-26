@@ -58,7 +58,7 @@ export default function ContactSection() {
           intricate embroidery.
         </p>
 
-        <p className="mt-4 md:mt-8 font-sen text-sm md:text-base lg:text-lg text-black/60 tracking-tight">
+        <p className="mt-4 md:mt-8 font-sen text-sm md:text-base lg:text-lg text-primary/60 tracking-tight">
           Have questions, feedback, or need assistance? We’re here to help!
           Reach out to us for any inquiries, from customs to order assistance,
           we’ll be happy to assist.

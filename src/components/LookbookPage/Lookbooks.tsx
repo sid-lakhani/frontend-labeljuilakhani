@@ -67,7 +67,7 @@ export default function Lookbooks() {
                 <p className="text-sm md:text-base text-black/60">
                   {collection.Date}
                 </p>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair text-primary mt-2 leading-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-kenao uppercase text-primary mt-2 leading-tight">
                   {collection.Title}
                 </h2>
                 <p className="font-sen text-sm md:text-base lg:text-lg text-black/70 mt-4 leading-relaxed">

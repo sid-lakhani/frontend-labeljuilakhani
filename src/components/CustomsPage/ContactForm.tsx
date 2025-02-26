@@ -27,10 +27,10 @@ export default function ContactForm() {
         form.current!,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
-      setStatus("Message sent successfully! ✅");
+      setStatus("Message sent successfully! :)");
       form.current?.reset();
     } catch (error) {
-      setStatus("Failed to send message. ❌");
+      setStatus("Failed to send message. :(");
       console.error("EmailJS Error:", error);
     } finally {
       setLoading(false);
@@ -49,14 +49,14 @@ export default function ContactForm() {
           name="first_name"
           required
           placeholder="First Name:"
-          className="w-full md:w-1/2 border-b border-black/30 bg-transparent focus:outline-none focus:border-black/70 p-2"
+          className="placeholder:text-[#766551]/30 w-full md:w-1/2 border-b border-[#766551]/70 bg-transparent focus:outline-none focus:border-[#766551] p-2"
         />
         <input
           type="text"
           name="last_name"
           required
           placeholder="Last Name:"
-          className="w-full md:w-1/2 border-b border-black/30 bg-transparent focus:outline-none focus:border-black/70 p-2"
+          className="placeholder:text-[#766551]/30 w-full md:w-1/2 border-b border-[#766551]/70 bg-transparent focus:outline-none focus:border-[#766551] p-2"
         />
       </div>
 
@@ -65,7 +65,7 @@ export default function ContactForm() {
         name="user_email"
         required
         placeholder="Email:"
-        className="w-full border-b border-black/30 bg-transparent focus:outline-none focus:border-black/70 p-2"
+        className="placeholder:text-[#766551]/30 w-full border-b border-[#766551]/70 bg-transparent focus:outline-none focus:border-[#766551] p-2"
       />
 
       <input
@@ -73,7 +73,7 @@ export default function ContactForm() {
         name="phone_number"
         required
         placeholder="Phone Number:"
-        className="w-full border-b border-black/30 bg-transparent focus:outline-none focus:border-black/70 p-2"
+        className="placeholder:text-[#766551]/30 w-full border-b border-[#766551]/70 bg-transparent focus:outline-none focus:border-[#766551] p-2"
       />
 
       <input
@@ -81,14 +81,14 @@ export default function ContactForm() {
         name="subject"
         required
         placeholder="Subject:"
-        className="w-full border-b border-black/30 bg-transparent focus:outline-none focus:border-black/70 p-2"
+        className="placeholder:text-[#766551]/30 w-full border-b border-[#766551]/70 bg-transparent focus:outline-none focus:border-[#766551] p-2"
       />
 
       <textarea
         name="message"
         required
         placeholder="Message:"
-        className="w-full border-b border-black/30 bg-transparent focus:outline-none focus:border-black/70 p-2 h-24 resize-none"
+        className="placeholder:text-[#766551]/30 w-full border-b border-[#766551]/70 bg-transparent focus:outline-none focus:border-[#766551] p-2 h-24 resize-none"
       ></textarea>
 
       <button

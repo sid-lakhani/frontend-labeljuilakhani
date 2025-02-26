@@ -90,7 +90,7 @@ export default function CollectionPage() {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`h-3 w-3 rounded-full ${
-                index === currentIndex ? "bg-black" : "bg-gray-400"
+                index === currentIndex ? "bg-primary" : "bg-primary/40"
               }`}
             ></button>
           ))}

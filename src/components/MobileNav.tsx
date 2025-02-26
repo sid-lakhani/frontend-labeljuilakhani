@@ -8,11 +8,11 @@ import Link from "next/link";
 
 const navItems = [
   { id: "home", name: "Home", href: "/" },
-  { id: "lookbooks", name: "Lookbooks", href: "/lookbook" },
-  { id: "shop", name: "Shop", href: "https://shop.labeljuilakhani.com" },
-  { id: "customs", name: "Customs", href: "/customs" },
-  { id: "blogs", name: "Blogs", href: "/blogs" },
   { id: "about", name: "About Us", href: "/about" },
+  { id: "lookbook", name: "Lookbook", href: "/lookbook" },
+  { id: "shop", name: "Shop", href: "https://shop.labeljuilakhani.com" },
+  { id: "blogs", name: "Blogs", href: "/blogs" },
+  { id: "customs", name: "Customs", href: "/customs" },
 ];
 
 export default function MobileNav() {

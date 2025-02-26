@@ -89,24 +89,24 @@ export default function BlogSection() {
         {otherBlogs.map((post) => {
           const coverImageUrl = `http://localhost:1337${post.coverImage.url}`;
           return (
-            <div key={post.id} className="flex flex-col border border-black/10">
+            <div key={post.id} className="flex flex-col border border-primary/10">
               <img
                 src={coverImageUrl}
                 alt="blog"
                 className="w-full h-[300px] md:h-full object-cover"
               />
               <div className="p-4 md:p-8">
-                <p className="text-xs md:text-sm md:mt-6 tracking-[0.5em] uppercase font-montserrat font-medium">
+                <p className="text-primary text-xs md:text-sm md:mt-6 tracking-[0.5em] uppercase font-montserrat font-medium">
                   {post.BlogDate}
                 </p>
                 <h2 className="font-playfair text-4xl md:text-3xl lg:text-5xl text-primary my-2 md:mt-4 leading-[2.5rem]">
                   {post.Title}
                 </h2>
-                <p className="text-xs md:text-sm font-sen text-black/60 md:mt-6">
+                <p className="text-xs md:text-sm font-sen text-primary/60 md:mt-6">
                   By Jui Lakhani
                 </p>
                 <Link href={`/blogs/${post.slugUrl}`}>
-                  <button className="bg-quaternary text-tertiary border border-black/80 font-montserrat font-bold text-xs px-2 md:px-4 py-1 md:py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary mt-4 md:mt-6">
+                  <button className="bg-quaternary text-tertiary border border-primary/80 font-montserrat font-bold text-xs px-2 md:px-4 py-1 md:py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary mt-4 md:mt-6">
                     Read More
                   </button>
                 </Link>

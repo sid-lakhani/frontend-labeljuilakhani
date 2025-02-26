@@ -15,16 +15,16 @@ export default function Header() {
       {/* Navigation Links */}
       <nav className="hidden absolute left-1/2 transform -translate-x-1/2 md:flex items-center lg:gap-8 md:gap-4 uppercase lg:text-xl md:text-sm font-montserrat">
         <Link
+          href="/about"
+          className="text-quaternary hover:text-quaternary/70 duration-150 transition-colors"
+        >
+          About Us
+        </Link>
+        <Link
           href="/lookbook"
           className="text-quaternary hover:text-quaternary/70 duration-150 transition-colors"
         >
           Lookbook
-        </Link>
-        <Link
-          href="/customs"
-          className="text-quaternary hover:text-quaternary/70 duration-150 transition-colors"
-        >
-          Customs
         </Link>
         <Link
           href="/blogs"
@@ -33,10 +33,10 @@ export default function Header() {
           Blogs
         </Link>
         <Link
-          href="/about"
+          href="/customs"
           className="text-quaternary hover:text-quaternary/70 duration-150 transition-colors"
         >
-          About Us
+          Customs
         </Link>
       </nav>
 
