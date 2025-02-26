@@ -16,7 +16,7 @@ export default function Testimonials() {
     const fetchTestimonials = async () => {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/testimonials?populate=*`
+          `https://cms.labeljuilakhani/api/testimonials?populate=*`
         );
         const data = await response.json();
 

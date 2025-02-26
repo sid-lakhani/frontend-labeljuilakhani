@@ -24,7 +24,7 @@ export default function BlogSection() {
       try {
         // Fetch Featured Blog
         const featuredRes = await fetch(
-          `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/blogs?filters[isFeatured][$eq]=true&populate=*`
+          `https://cms.labeljuilakhani/api/blogs?filters[isFeatured][$eq]=true&populate=*`
         );
         const featuredData = await featuredRes.json();
 
@@ -34,7 +34,7 @@ export default function BlogSection() {
 
         // Fetch Other Blogs
         const otherRes = await fetch(
-          `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/blogs?filters[isFeatured][$eq]=false&populate=*`
+          `https://cms.labeljuilakhani/api/blogs?filters[isFeatured][$eq]=false&populate=*`
         );
         const otherData = await otherRes.json();
 
@@ -49,7 +49,7 @@ export default function BlogSection() {
     fetchBlogs();
   }, []);
 
-  const imageUrl = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${featuredBlog?.coverImage.url}`;
+  const imageUrl = `https://cms.labeljuilakhani${featuredBlog?.coverImage.url}`;
 
   return (
     <div className="min-h-screen w-screen py-[5%] px-[5%] md:px-[10%] lg:px-[20%] pt-28 md:pt-40">
@@ -87,7 +87,7 @@ export default function BlogSection() {
       {/* Other Blogs */}
       <div className="grid grid-rows-1 md:grid-cols-2 gap-12 md:gap-4 lg:gap-8 mt-12 md:mt-16">
         {otherBlogs.map((post) => {
-          const coverImageUrl = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${post.coverImage.url}`;
+          const coverImageUrl = `https://cms.labeljuilakhani${post.coverImage.url}`;
           return (
             <div key={post.id} className="flex flex-col border border-primary/10">
               <img

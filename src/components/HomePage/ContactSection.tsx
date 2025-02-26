@@ -16,7 +16,7 @@ export default function ContactSection() {
       const fetchCollection = async () => {
         try {
           const response = await fetch(
-            `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/collections?filters[isLive][$eq]=true&populate=*`
+            `https://cms.labeljuilakhani/api/collections?filters[isLive][$eq]=true&populate=*`
           );
           const data = await response.json();
           if (data.data && data.data.length > 0) {
@@ -31,7 +31,7 @@ export default function ContactSection() {
     }, []);
   
     const imageUrl = collection
-      ? `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${collection.HomePageContactIfLive.url}`
+      ? `https://cms.labeljuilakhani${collection.HomePageContactIfLive.url}`
       : "";
 
 

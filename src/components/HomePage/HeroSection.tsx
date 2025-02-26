@@ -10,13 +10,13 @@ export default function HeroSection() {
     async function fetchHomeImage() {
       try {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/collections?filters[isLive][$eq]=true&populate=*`
+          `https://cms.labeljuilakhani/api/collections?filters[isLive][$eq]=true&populate=*`
         );
         const data = await res.json();
         const imageUrl = data?.data?.[0]?.HomeImage?.url;
 
         if (imageUrl) {
-          setHomeImage(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${imageUrl}`);
+          setHomeImage(`https://cms.labeljuilakhani${imageUrl}`);
         }
       } catch (error) {
         console.error("Error fetching home image:", error);

@@ -28,7 +28,7 @@ export default function BlogPage() {
     const fetchBlog = async () => {
       try {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/blogs?filters[slugUrl][$eq]=${slugUrl}&populate=*`
+          `https://cms.labeljuilakhani/api/blogs?filters[slugUrl][$eq]=${slugUrl}&populate=*`
         );
         const data = await res.json();
         if (data.data && data.data.length > 0) {
@@ -50,7 +50,7 @@ export default function BlogPage() {
     );
   }
 
-  const imageUrl = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${blog.headImage.url}`;
+  const imageUrl = `https://cms.labeljuilakhani${blog.headImage.url}`;
 
   return (
     <>
