@@ -1,6 +1,13 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { constructMetadata } from "@/lib/metadata";
 import React from "react";
+
+export const metadata = constructMetadata({
+  title: "FAQs | Label Jui Lakhani",
+  description: "Find answers to frequently asked questions about Label Jui Lakhani, our products, and services.",
+  url: "https://labeljuilakhani.in/pages/frequently-asked-questions",
+});
 
 export default function Page() {
   return (

@@ -1,12 +1,23 @@
 import BlogSection from "@/components/BlogsPage/BlogSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import type { Metadata } from "next";
+import { constructMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Blogs | Label Jui Lakhani",
-  description: "Blogs by Label Jui Lakhani",
-};
+export const metadata = constructMetadata({
+  title: "Blog | Label Jui Lakhani",
+  description:
+    "Read the latest articles on fashion trends, ethnic wear, and behind-the-scenes stories at Label Jui Lakhani.",
+  url: "https://labeljuilakhani.in/blogs",
+  image: "/open-graph/blog-thumbnail.jpg",
+  keywords: [
+    "Label Jui Lakhani Blog",
+    "Fashion Trends",
+    "Ethnic Wear Insights",
+    "Designer Fashion",
+    "Indian Clothing",
+    "Wedding Fashion",
+  ],
+});
 
 export default function Page() {
   return (

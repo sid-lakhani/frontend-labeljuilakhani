@@ -2,12 +2,23 @@ import HeroSection from "@/components/AboutUsPage/HeroSection";
 import StatsSection from "@/components/AboutUsPage/StatsSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import type { Metadata } from "next";
+import { constructMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = constructMetadata({
   title: "About | Label Jui Lakhani",
-  description: "About Label Jui Lakhani",
-};
+  description:
+    "Discover the story behind Label Jui Lakhani and our commitment to luxury ethnic fashion.",
+  url: "https://labeljuilakhani.in/about",
+  image: "/open-graph/about-thumbnail.jpg",
+  keywords: [
+    "Label Jui Lakhani",
+    "Luxury Ethnic Fashion",
+    "About Us",
+    "Our Story",
+    "Indian Fashion",
+    "Handmade Couture",
+  ],
+});
 
 export default function Page() {
   return (

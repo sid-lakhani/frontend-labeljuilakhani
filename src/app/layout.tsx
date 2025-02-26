@@ -1,5 +1,8 @@
+import { constructMetadata } from "@/lib/metadata";
 import "./globals.css";
 import { Montserrat, PlayfairDisplay, Moontime, Sen, Kenao } from "@/lib/fonts";
+
+export const metadata = constructMetadata({});
 
 export default function RootLayout({
   children,

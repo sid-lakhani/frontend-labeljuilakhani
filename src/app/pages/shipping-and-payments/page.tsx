@@ -1,6 +1,13 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { constructMetadata } from "@/lib/metadata";
 import React from "react";
+
+export const metadata = constructMetadata({
+  title: "Shipping And Payments | Label Jui Lakhani",
+  description: "Learn about our shipping and payment policies at Label Jui Lakhani.",
+  url: "https://labeljuilakhani.in/pages/shipping-and-payments",
+});
 
 export default function Page() {
   return (

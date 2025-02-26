@@ -1,12 +1,25 @@
 import ContactForm from "@/components/CustomsPage/ContactForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { Metadata } from "next";
+import { constructMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Contact Us | Label Juilakhani",
-  description: "Get in touch with us for inquiries and custom outfit requests.",
-};
+export const metadata = constructMetadata({
+  title: "Customs | Label Jui Lakhani",
+  description:
+    "Get in touch with Label Jui Lakhani for inquiries, collaborations, or customer support.",
+  url: "https://labeljuilakhani.in/contact",
+  image: "/open-graph/contact-thumbnail.jpg",
+  keywords: [
+    "Label Jui Lakhani Contact",
+    "Customer Support",
+    "Inquiries",
+    "Custom Outfits",
+    "Designer Consultation",
+    "Fashion Inquiries",
+    "Collaboration",
+    "Ethnic Wear Consultation",
+  ],
+});
 
 export default function Page() {
   return (
@@ -20,17 +33,27 @@ export default function Page() {
         {/* Contact Info */}
         <div className="flex flex-col md:flex-row gap-4 md:gap-20 mt-8 md:mt-12 items-center text-center justify-between font-sen text-[3vw] md:text-lg lg:text-xl text-black/60">
           <div className="flex flex-col">
-            <h1 className="font-playfair text-black mb-2 text-[6vw] md:text-2xl lg:text-3xl">Contact</h1>
-            <a href="mailto:labeljuilakhani@gmail.com" className="underline">labeljuilakhani@gmail.com</a>
-            <a href="tel:+918454948349" className="underline">+91 84549 48349</a>
+            <h1 className="font-playfair text-black mb-2 text-[6vw] md:text-2xl lg:text-3xl">
+              Contact
+            </h1>
+            <a href="mailto:labeljuilakhani@gmail.com" className="underline">
+              labeljuilakhani@gmail.com
+            </a>
+            <a href="tel:+918454948349" className="underline">
+              +91 84549 48349
+            </a>
           </div>
           <div className="flex flex-col">
-            <h1 className="font-playfair text-black mb-2 text-[6vw] md:text-2xl lg:text-3xl">Open Hours</h1>
+            <h1 className="font-playfair text-black mb-2 text-[6vw] md:text-2xl lg:text-3xl">
+              Open Hours
+            </h1>
             <p>Monday - Saturday</p>
             <p>9:00 am - 8:00 pm IST</p>
           </div>
           <div className="flex flex-col">
-            <h1 className="font-playfair text-black mb-2 text-[6vw] md:text-2xl lg:text-3xl">Location</h1>
+            <h1 className="font-playfair text-black mb-2 text-[6vw] md:text-2xl lg:text-3xl">
+              Location
+            </h1>
             <p>Vadodara, Gujarat</p>
             <p>India</p>
           </div>
@@ -38,7 +61,9 @@ export default function Page() {
 
         {/* Inquiry Section */}
         <div className="flex flex-col items-center text-center mt-8 md:mt-12 gap-4 md:gap-8">
-          <h1 className="font-playfair text-primary italic text-[10vw] md:text-5xl lg:text-6xl">Inquiries</h1>
+          <h1 className="font-playfair text-primary italic text-[10vw] md:text-5xl lg:text-6xl">
+            Inquiries
+          </h1>
           <p className="font-sen text-[3vw] md:text-lg lg:text-xl text-black/60">
             For any inquiries or custom outfit requests, please complete the
             provided form, and our team will reach out to you promptly.

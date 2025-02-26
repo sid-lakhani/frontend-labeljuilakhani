@@ -5,12 +5,6 @@ import ContactSection from "@/components/HomePage/ContactSection";
 import FeaturedLookbooks from "@/components/HomePage/FeaturedLookbooks";
 import HeroSection from "@/components/HomePage/HeroSection";
 import Testimonials from "@/components/HomePage/Testimonials";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Label Jui Lakhani",
-  description: "Welcome to Label Jui Lakhani",
-};
 
 export default function Page() {
   return (
