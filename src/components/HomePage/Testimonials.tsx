@@ -16,7 +16,7 @@ export default function Testimonials() {
     const fetchTestimonials = async () => {
       try {
         const response = await fetch(
-          `https://cms.labeljuilakhani/api/testimonials?populate=*`
+          `https://cms.labeljuilakhani.in/api/testimonials?populate=*`
         );
         const data = await response.json();
 

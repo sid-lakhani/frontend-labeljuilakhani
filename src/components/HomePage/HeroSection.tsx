@@ -10,13 +10,13 @@ export default function HeroSection() {
     async function fetchHomeImage() {
       try {
         const res = await fetch(
-          `https://cms.labeljuilakhani/api/collections?filters[isLive][$eq]=true&populate=*`
+          `https://cms.labeljuilakhani.in/api/collections?filters[isLive][$eq]=true&populate=*`
         );
         const data = await res.json();
         const imageUrl = data?.data?.[0]?.HomeImage?.url;
 
         if (imageUrl) {
-          setHomeImage(`https://cms.labeljuilakhani${imageUrl}`);
+          setHomeImage(`https://cms.labeljuilakhani.in${imageUrl}`);
         }
       } catch (error) {
         console.error("Error fetching home image:", error);

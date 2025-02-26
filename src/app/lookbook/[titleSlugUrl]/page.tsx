@@ -24,7 +24,7 @@ export default function CollectionPage() {
     const fetchCollection = async () => {
       try {
         const res = await fetch(
-          `https://cms.labeljuilakhani/api/collections?filters[titleSlugUrl][$eq]=${titleSlugUrl}&populate=*`
+          `https://cms.labeljuilakhani.in/api/collections?filters[titleSlugUrl][$eq]=${titleSlugUrl}&populate=*`
         );
         const data = await res.json();
         if (data.data && data.data.length > 0) {
@@ -61,7 +61,7 @@ export default function CollectionPage() {
         <div className="w-full md:w-2/3 lg:w-2/5 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 lg:gap-12">
           {/* Previous Thumbnail (only for larger screens) */}
           <img
-            src={`https://cms.labeljuilakhani${collection.Images[prevIndex].url}`}
+            src={`https://cms.labeljuilakhani.in${collection.Images[prevIndex].url}`}
             alt="Previous Image"
             className="hidden md:block w-[15vw] object-cover opacity-50 cursor-pointer hover:opacity-75 transition-opacity"
             onClick={() => setCurrentIndex(prevIndex)}
@@ -69,14 +69,14 @@ export default function CollectionPage() {
 
           {/* Main Image */}
           <img
-            src={`https://cms.labeljuilakhani${collection.Images[currentIndex].url}`}
+            src={`https://cms.labeljuilakhani.in${collection.Images[currentIndex].url}`}
             alt={collection.Title}
             className="w-[80vw] md:w-[50vw] object-cover transition-opacity duration-500 ease-in-out"
           />
 
           {/* Next Thumbnail (only for larger screens) */}
           <img
-            src={`https://cms.labeljuilakhani${collection.Images[nextIndex].url}`}
+            src={`https://cms.labeljuilakhani.in${collection.Images[nextIndex].url}`}
             alt="Next Image"
             className="hidden md:block w-[15vw] object-cover opacity-50 cursor-pointer hover:opacity-75 transition-opacity"
             onClick={() => setCurrentIndex(nextIndex)}
@@ -99,13 +99,13 @@ export default function CollectionPage() {
         {/* Thumbnails for mobile */}
         <div className="mt-4 flex md:hidden w-full justify-center gap-4">
           <img
-            src={`https://cms.labeljuilakhani${collection.Images[prevIndex].url}`}
+            src={`https://cms.labeljuilakhani.in${collection.Images[prevIndex].url}`}
             alt="Previous Image"
             className="w-[30vw] object-cover opacity-60 cursor-pointer"
             onClick={() => setCurrentIndex(prevIndex)}
           />
           <img
-            src={`https://cms.labeljuilakhani${collection.Images[nextIndex].url}`}
+            src={`https://cms.labeljuilakhani.in${collection.Images[nextIndex].url}`}
             alt="Next Image"
             className="w-[30vw] object-cover opacity-60 cursor-pointer"
             onClick={() => setCurrentIndex(nextIndex)}

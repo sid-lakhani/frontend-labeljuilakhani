@@ -28,7 +28,7 @@ export default function BlogPage() {
     const fetchBlog = async () => {
       try {
         const res = await fetch(
-          `https://cms.labeljuilakhani/api/blogs?filters[slugUrl][$eq]=${slugUrl}&populate=*`
+          `https://cms.labeljuilakhani.in/api/blogs?filters[slugUrl][$eq]=${slugUrl}&populate=*`
         );
         const data = await res.json();
         if (data.data && data.data.length > 0) {
@@ -50,7 +50,7 @@ export default function BlogPage() {
     );
   }
 
-  const imageUrl = `https://cms.labeljuilakhani${blog.headImage.url}`;
+  const imageUrl = `https://cms.labeljuilakhani.in${blog.headImage.url}`;
 
   return (
     <>

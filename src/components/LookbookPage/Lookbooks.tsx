@@ -19,7 +19,7 @@ export default function Lookbooks() {
     const fetchCollections = async () => {
       try {
         const res = await fetch(
-          `https://cms.labeljuilakhani/api/collections?populate=*`
+          `https://cms.labeljuilakhani.in/api/collections?populate=*`
         );
         const data = await res.json();
 
@@ -47,7 +47,7 @@ export default function Lookbooks() {
 
       <div className="flex flex-col gap-28 md:gap-20">
         {collections.map((collection, index) => {
-          const ImageUrl = `https://cms.labeljuilakhani${collection.HomeImage.url}`;
+          const ImageUrl = `https://cms.labeljuilakhani.in${collection.HomeImage.url}`;
           return (
             <div
               key={collection.id}
