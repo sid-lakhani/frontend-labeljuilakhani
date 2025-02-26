@@ -23,11 +23,11 @@ export default function Footer() {
         <div className="flex flex-col gap-3 md:gap-4">
           <h1 className="font-bold text-[10px] lg:text-sm">Quick Links</h1>
           <Link className="hover:underline" href="/">Home</Link>
-          <Link className="hover:underline" href="/about">About Us</Link>
           <Link className="hover:underline" href="/lookbook">Lookbooks</Link>
           <Link className="hover:underline" href="/shop">Shop</Link>
-          <Link className="hover:underline" href="/blogs">Blogs</Link>
           <Link className="hover:underline" href="/customs">Customs</Link>
+          <Link className="hover:underline" href="/blogs">Blogs</Link>
+          <Link className="hover:underline" href="/about">About Us</Link>
         </div>
         <div className="flex flex-col gap-4 md:gap-6">
           <h1 className="font-bold text-[10px] lg:text-sm">Socials</h1>

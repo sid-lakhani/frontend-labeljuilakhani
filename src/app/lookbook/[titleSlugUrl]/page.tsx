@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Collection {
   Title: string;
@@ -45,54 +44,43 @@ export default function CollectionPage() {
     return <p className="text-center text-gray-500">Collection not found or error fetching data.</p>;
   }
 
-  const prevImage = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? collection.Images.length - 1 : prev - 1
-    );
-  };
-
-  const nextImage = () => {
-    setCurrentIndex((prev) =>
-      prev === collection.Images.length - 1 ? 0 : prev + 1
-    );
-  };
+  const prevIndex = (currentIndex - 1 + collection.Images.length) % collection.Images.length;
+  const nextIndex = (currentIndex + 1) % collection.Images.length;
 
   return (
     <>
       <Header />
-      <div className="min-h-screen flex flex-col items-center px-[5%] md:px-[10%] lg:px-[20%] pt-28 md:pt-40">
-        {/* Headings at the Top */}
-        <div className="text-start w-full md:w-2/5 mb-4 md:mb-8">
+      <div className="h-screen md:h-[100vw] lg:h-screen flex flex-col items-center justify-center px-[5vw] md:px-[10vw] lg:px-[15vw] pt-20 md:pt-28">
+        {/* <div className="text-start w-full md:w-2/5 mb-4 md:mb-8">
           <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-primary">
             Lookbook
           </p>
-        </div>
+        </div> */}
 
-        {/* Centered Carousel */}
-        <div className="relative flex flex-col items-center w-full md:w-2/5">
-          <div className="relative w-full">
-            <img
-              src={`http://localhost:1337${collection.Images[currentIndex].url}`}
-              alt={collection.Title}
-              className="w-full object-cover transition-opacity duration-500 ease-in-out"
-            />
-          </div>
+        {/* Image Carousel */}
+        <div className="w-full md:w-2/3 lg:w-2/5 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 lg:gap-12">
+          {/* Previous Thumbnail (only for larger screens) */}
+          <img
+            src={`http://localhost:1337${collection.Images[prevIndex].url}`}
+            alt="Previous Image"
+            className="hidden md:block w-[15vw] object-cover opacity-50 cursor-pointer hover:opacity-75 transition-opacity"
+            onClick={() => setCurrentIndex(prevIndex)}
+          />
 
-          {/* Left Arrow */}
-          <button
-            onClick={prevImage}
-            className="absolute -left-[20%] top-1/2 transform -translate-y-1/2 bg-quaternary/50 p-1 rounded-md border border-black"
-          >
-            <ChevronLeft className="w-[20px] md:w-[25px] lg:w-[30px] h-[20px] md:h-[25px] lg:h-[30px] text-black" />
-          </button>
+          {/* Main Image */}
+          <img
+            src={`http://localhost:1337${collection.Images[currentIndex].url}`}
+            alt={collection.Title}
+            className="w-[80vw] md:w-[50vw] object-cover transition-opacity duration-500 ease-in-out"
+          />
 
-          {/* Right Arrow */}
-          <button
-            onClick={nextImage}
-            className="absolute -right-[20%] top-1/2 transform -translate-y-1/2 bg-quaternary/50 p-1 rounded-md border border-black"
-          >
-            <ChevronRight className="w-[20px] md:w-[25px] lg:w-[30px] h-[20px] md:h-[25px] lg:h-[30px] text-black" />
-          </button>
+          {/* Next Thumbnail (only for larger screens) */}
+          <img
+            src={`http://localhost:1337${collection.Images[nextIndex].url}`}
+            alt="Next Image"
+            className="hidden md:block w-[15vw] object-cover opacity-50 cursor-pointer hover:opacity-75 transition-opacity"
+            onClick={() => setCurrentIndex(nextIndex)}
+          />
         </div>
 
         {/* Image Indicators */}
@@ -106,6 +94,22 @@ export default function CollectionPage() {
               }`}
             ></button>
           ))}
+        </div>
+        
+        {/* Thumbnails for mobile */}
+        <div className="mt-4 flex md:hidden w-full justify-center gap-4">
+          <img
+            src={`http://localhost:1337${collection.Images[prevIndex].url}`}
+            alt="Previous Image"
+            className="w-[30vw] object-cover opacity-50 cursor-pointer hover:opacity-75 transition-opacity"
+            onClick={() => setCurrentIndex(prevIndex)}
+          />
+          <img
+            src={`http://localhost:1337${collection.Images[nextIndex].url}`}
+            alt="Next Image"
+            className="w-[30vw] object-cover opacity-50 cursor-pointer hover:opacity-75 transition-opacity"
+            onClick={() => setCurrentIndex(nextIndex)}
+          />
         </div>
       </div>
       <Footer />
