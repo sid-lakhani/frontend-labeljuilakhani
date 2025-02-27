@@ -9,7 +9,6 @@ export const metadata = constructMetadata({
   description:
     "Discover the story behind Label Jui Lakhani and our commitment to luxury ethnic fashion.",
   url: "https://labeljuilakhani.in/about",
-  image: "/open-graph/about-thumbnail.jpg",
   keywords: [
     "Label Jui Lakhani",
     "Luxury Ethnic Fashion",

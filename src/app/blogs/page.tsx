@@ -8,7 +8,6 @@ export const metadata = constructMetadata({
   description:
     "Read the latest articles on fashion trends, ethnic wear, and behind-the-scenes stories at Label Jui Lakhani.",
   url: "https://labeljuilakhani.in/blogs",
-  image: "/open-graph/blog-thumbnail.jpg",
   keywords: [
     "Label Jui Lakhani Blog",
     "Fashion Trends",

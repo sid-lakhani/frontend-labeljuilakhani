@@ -7,8 +7,7 @@ export const metadata = constructMetadata({
   title: "Customs | Label Jui Lakhani",
   description:
     "Get in touch with Label Jui Lakhani for inquiries, collaborations, or customer support.",
-  url: "https://labeljuilakhani.in/contact",
-  image: "/open-graph/contact-thumbnail.jpg",
+  url: "https://labeljuilakhani.in/customs",
   keywords: [
     "Label Jui Lakhani Contact",
     "Customer Support",
