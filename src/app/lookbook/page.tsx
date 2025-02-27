@@ -4,9 +4,9 @@ import Lookbooks from "@/components/LookbookPage/Lookbooks";
 import { constructMetadata } from "@/lib/metadata";
 
 export const metadata = constructMetadata({
-  title: "Lookbooks | Label Jui Lakhani",
+  title: "Lookbook | Label Jui Lakhani",
   description:
-    "Explore our Lookbooks featuring the latest luxury ethnic fashion collections from Label Jui Lakhani.",
+    "Explore the lookbooks of Jui Lakhani’s collections – curated showcase of timeless pieces.",
   url: "https://labeljuilakhani.in/lookbook",
   keywords: [
     "Label Jui Lakhani Lookbooks",

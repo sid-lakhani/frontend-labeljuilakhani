@@ -15,7 +15,7 @@ export const constructMetadata = ({
   description = "Explore the exquisite collections of Label Jui Lakhani, featuring handcrafted luxury ethnic wear that blends tradition with modern elegance.",
   url = process.env.NEXT_PUBLIC_SITE_URL ?? "https://labeljuilakhani.in",
   keywords = [],
-  image = "/open-graph/thumbnail.jpg",
+  image = "/open-graph/HOME.png",
 }: MetadataProps): Metadata => ({
   title: preTitle + title,
   verification: {

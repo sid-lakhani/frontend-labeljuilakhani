@@ -6,7 +6,7 @@ import { constructMetadata } from "@/lib/metadata";
 export const metadata = constructMetadata({
   title: "Customs | Label Jui Lakhani",
   description:
-    "Get in touch with Label Jui Lakhani for inquiries, collaborations, or customer support.",
+    "Create your dream outfit with Jui Lakhani’s custom design service. From bespoke bridal lehengas to personalized ensembles, we bring your vision to life with exquisite craftsmanship and contemporary elegance.",
   url: "https://labeljuilakhani.in/customs",
   keywords: [
     "Label Jui Lakhani Contact",

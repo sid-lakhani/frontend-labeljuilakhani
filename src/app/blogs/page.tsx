@@ -4,9 +4,9 @@ import Header from "@/components/Header";
 import { constructMetadata } from "@/lib/metadata";
 
 export const metadata = constructMetadata({
-  title: "Blog | Label Jui Lakhani",
+  title: "Blogs | Label Jui Lakhani",
   description:
-    "Read the latest articles on fashion trends, ethnic wear, and behind-the-scenes stories at Label Jui Lakhani.",
+    "Discover the world of Jui Lakhani through our blogs – a space for inspiration and insights into our cultural artforms.",
   url: "https://labeljuilakhani.in/blogs",
   keywords: [
     "Label Jui Lakhani Blog",
