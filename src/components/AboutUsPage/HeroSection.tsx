@@ -16,7 +16,7 @@ export default function HeroSection() {
         </p>
         <div className="md:w-1/2 flex flex-col justify-evenly gap-4">
           <img
-            src="/ABOUT.JPG"
+            src="/about.webp"
             alt="Portrait"
             className="object-contain rounded-xl bg-[#A18668] w-full md:w-[90%]"
           />
