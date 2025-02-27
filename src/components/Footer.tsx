@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className="h-[45dvh] md:h-[40dvh] flex flex-col items-center justify-center md:justify-evenly gap-8 md:gap-8 lg:gap-12 mb-2 md:mb-4 lg:mb-8 md:mt-16 lg:mt-32">
       <div className="flex flex-col md:flex-row items-center justify-evenly w-full bg-primary px-6 md:px-12 lg:px-20 py-6 md:py-8 gap-4 md:gap-0">
-        <p className="font-playfair italic text-3xl md:text-5xl lg:text-6xl tracking-tight text-quaternary">
+        <p className="font-playfair italic text-3xl md:text-5xl lg:text-5xl tracking-tight text-quaternary">
           Let's Collaborate!
         </p>
         <Link href="/customs">
