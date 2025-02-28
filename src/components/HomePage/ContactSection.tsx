@@ -49,13 +49,13 @@ export default function ContactSection() {
       )}
       <div className="text-center md:text-left text-primary tracking-tighter max-w-xl">
         <p className="text-2xl md:text-3xl lg:text-5xl font-playfair ">
-          Explore <span className="text-secondary">Indian folk</span>
+          Explore <span className="text-secondary italic">with</span> us:
         </p>
         <p className="text-2xl md:text-3xl lg:text-5xl font-playfair ">
-          couture: vibrant textiles,
+          Let's create something
         </p>
         <p className="text-2xl md:text-3xl lg:text-5xl font-playfair ">
-          intricate embroidery.
+          beautiful together
         </p>
 
         <p className="mt-4 md:mt-8 font-sen text-sm md:text-base lg:text-lg text-primary/60 tracking-tight">
