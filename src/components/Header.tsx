@@ -47,7 +47,7 @@ export default function Header() {
       {/* Shop Button */}
       <div className="ml-auto">
         <Link
-          href="https://shop.labeljuilakhani.com"
+          href="https://shop.labeljuilakhani.in"
           className="hidden md:block md:text-sm lg:text-base font-montserrat font-bold uppercase text-quaternary border border-quaternary md:px-4 md:py-2 lg:px-6 lg:py-2 rounded-full hover:underline"
         >
           Shop now

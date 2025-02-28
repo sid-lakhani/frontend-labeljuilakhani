@@ -10,7 +10,7 @@ const navItems = [
   { id: "home", name: "Home", href: "/" },
   { id: "about", name: "About Us", href: "/about" },
   { id: "lookbook", name: "Lookbook", href: "/lookbook" },
-  { id: "shop", name: "Shop", href: "https://shop.labeljuilakhani.com" },
+  { id: "shop", name: "Shop", href: "https://shop.labeljuilakhani.in" },
   { id: "blogs", name: "Blogs", href: "/blogs" },
   { id: "customs", name: "Customs", href: "/customs" },
 ];

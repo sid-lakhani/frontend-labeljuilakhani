@@ -27,7 +27,7 @@ export default function Footer() {
           <Link className="hover:underline" href="/lookbook">
             Lookbook
           </Link>
-          <Link className="hover:underline" href="/shop">
+          <Link className="hover:underline" href="https://shop.labeljuilakhani.in">
             Shop
           </Link>
           <Link className="hover:underline" href="/blogs">

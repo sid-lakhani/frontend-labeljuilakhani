@@ -2,11 +2,11 @@ import React from "react";
 
 export default function AboutSection() {
   return (
-    <div className="h-[90dvh] py-[5%] px-[5%] md:px-[10%] lg:px-[20%] flex flex-col justify-center">
+    <div className="h-[90dvh] py-[5%] px-[5%] md:px-[10%] lg:px-[20%] flex flex-col md:gap-2 lg:gap-0 justify-center">
       <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-secondary">
         About us
       </p>
-      <div className="text-[10vw] md:text-7xl lg:text-[5vw] font-playfair text-secondary tracking-tighter mt-2">
+      <div className="text-[10vw] md:text-[7vw] lg:text-[5vw] font-playfair text-secondary tracking-tighter mt-2">
         <p className="leading-[0.9]">More than</p>
         <p className="uppercase text-primary leading-[0.9]">
           Clothing <span className="text-[9vw] md:text-6xl lg:text-[4vw] lowercase text-secondary italic">we</span>

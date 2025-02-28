@@ -55,7 +55,7 @@ export default function Testimonials() {
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             ease: "linear",
-            duration: 30,
+            duration: 50,
             repeat: Infinity,
           }}
         >
@@ -65,7 +65,7 @@ export default function Testimonials() {
                 key={index}
                 className="bg-[#766551] rounded-3xl p-6 h-[250px] md:h-[300px] lg:h-[400px] w-[250px] md:w-[300px] lg:w-[400px] flex flex-col justify-between relative"
               >
-                <p className="h-full font-sen text-base md:text-lg lg:text-2xl text-quaternary italic flex justify-center items-center text-center">
+                <p className="h-full font-sen text-sm md:text-base lg:text-2xl text-quaternary italic flex justify-center items-center text-center">
                   {post.Testimonial}
                 </p>
                 <img
