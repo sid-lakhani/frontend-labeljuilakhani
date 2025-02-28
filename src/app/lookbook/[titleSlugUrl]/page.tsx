@@ -84,10 +84,32 @@ export default function CollectionPage() {
           <img
             src={`https://cms.labeljuilakhani.in${collection.Images[currentIndex].url}`}
             alt={collection.Title}
-            className="w-[80vw] md:w-[50vw] object-cover transition-opacity duration-500 ease-in-out"
+            className="hidden md:block md:w-[50vw] object-cover transition-opacity duration-500 ease-in-out"
             onContextMenu={(e) => e.preventDefault()}
             draggable={false}
           />
+
+          {/* Main Image with Click Navigation */}
+          <div
+            className="md:hidden w-[80vw] relative cursor-pointer"
+            onClick={(e) => {
+              const { left, width } = e.currentTarget.getBoundingClientRect();
+              const clickX = e.clientX - left;
+              if (clickX < width / 2) {
+                setCurrentIndex(prevIndex);
+              } else {
+                setCurrentIndex(nextIndex);
+              }
+            }}
+          >
+            <img
+              src={`https://cms.labeljuilakhani.in${collection.Images[currentIndex].url}`}
+              alt={collection.Title}
+              className="md:hidden w-full object-cover transition-opacity duration-500 ease-in-out"
+              onContextMenu={(e) => e.preventDefault()}
+              draggable={false}
+            />
+          </div>
 
           {/* Next Thumbnail (only for larger screens) */}
           <img
