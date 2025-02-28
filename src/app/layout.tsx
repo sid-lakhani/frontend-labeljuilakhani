@@ -11,8 +11,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="3265c473-0ce6-4c62-aa7b-bc625acf96d5"
+        ></script>
+      </head>
       <body
-        className= {`select-none ${Montserrat.variable} ${PlayfairDisplay.variable} ${Kenao.variable} ${Moontime.variable} ${Sen.variable} bg-quaternary antialiased`}
+        className={`select-none ${Montserrat.variable} ${PlayfairDisplay.variable} ${Kenao.variable} ${Moontime.variable} ${Sen.variable} bg-quaternary antialiased`}
       >
         {children}
       </body>
