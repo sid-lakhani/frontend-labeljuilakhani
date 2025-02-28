@@ -20,6 +20,7 @@ export default {
         playfair: "var(--font-playfair), serif",
         sen: "var(--font-sen), sans-serif",
         kenao: "var(--font-kenao), sans-serif",
+        tillana: "var(--font-tillana), sans-serif",
         moontime: "var(--font-moontime), cursive",
       },
     },

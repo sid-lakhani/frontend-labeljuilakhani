@@ -1,6 +1,6 @@
 import { constructMetadata } from "@/lib/metadata";
 import "./globals.css";
-import { Montserrat, PlayfairDisplay, Moontime, Sen, Kenao } from "@/lib/fonts";
+import { Montserrat, PlayfairDisplay, Moontime, Sen, Kenao, Tillana } from "@/lib/fonts";
 
 export const metadata = constructMetadata({});
 
@@ -19,7 +19,7 @@ export default function RootLayout({
         ></script>
       </head>
       <body
-        className={`select-none ${Montserrat.variable} ${PlayfairDisplay.variable} ${Kenao.variable} ${Moontime.variable} ${Sen.variable} bg-quaternary antialiased`}
+        className={`select-none ${Montserrat.variable} ${Tillana.variable} ${PlayfairDisplay.variable} ${Kenao.variable} ${Moontime.variable} ${Sen.variable} bg-quaternary antialiased`}
       >
         {children}
       </body>

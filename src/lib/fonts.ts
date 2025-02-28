@@ -61,6 +61,12 @@ export const Kenao = localFont({
   variable: "--font-kenao",
 });
 
+// Tillana
+export const Tillana = localFont({
+  src: "./font/Tillana-Regular.ttf",
+  variable: "--font-tillana",
+});
+
 // Moontime
 export const Moontime = localFont({
   src: "./font/Moontime.ttf",

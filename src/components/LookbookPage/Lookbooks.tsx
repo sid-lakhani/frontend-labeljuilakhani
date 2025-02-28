@@ -35,8 +35,8 @@ export default function Lookbooks() {
   }, []);
 
   return (
-    <div className="min-h-screen w-screen py-[5%] px-[5%] md:px-[10%] lg:px-[25%] pt-32 md:pt-40">
-      <div className="text-start mb-16">
+    <div className="min-h-screen w-screen py-[5%] px-[5%] md:px-[5%] lg:px-[15%] pt-32 md:pt-40">
+      <div className="text-start mb-4 md:mb-8 lg:mb-12 md:px-[5%]">
         <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-primary">
           Lookbooks
         </p>
@@ -45,43 +45,45 @@ export default function Lookbooks() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-28 md:gap-20">
-        {collections.map((collection, index) => {
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-2 lg:gap-8">
+        {collections.map((collection) => {
           const ImageUrl = `https://cms.labeljuilakhani.in${collection.HomeImage.url}`;
+          const titleCss =
+            collection.Title === "Evara"
+              ? "font-kenao text-3xl md:text-4xl lg:text-5xl"
+              : collection.Title === "रास"
+              ? "font-tillana text-5xl md:text-5xl lg:text-6xl -mt-2"
+              : "font-kenao";
+
           return (
             <div
               key={collection.id}
-              className={`flex flex-col md:flex-row md:justify-evenly lg:justify-normal gap-8 md:gap-20 md:items-center ${
-                index % 2 === 0 ? "" : "md:flex-row-reverse"
-              }`}
+              className="bg-inherit shadow-md p-8 pb-4 rounded-md flex flex-col relative"
             >
-              <div className="relative group">
-                <img
-                  src={ImageUrl}
-                  alt={collection.Title}
-                  className="h-auto w-full md:h-[500px] md:w-[350px] lg:h-[650px] lg:w-[450px] object-cover"
-                  onContextMenu={(e) => e.preventDefault()}
-                  draggable={false}
-                />
-              </div>
-
-              <div className="w-auto flex flex-col justify-evenly text-left">
-                <p className="text-sm md:text-base text-black/60">
-                  {collection.Date}
-                </p>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-kenao uppercase text-primary mt-2 leading-tight">
+              <img
+                src={ImageUrl}
+                alt={collection.Title}
+                className="w-full h-[40vh] md:h-[40vh] object-cover rounded-md"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable={false}
+              />
+              <div className="flex flex-col justify-center mt-4 pr-16 gap-2">
+                <h2
+                  className={`uppercase text-primary leading-tight ${titleCss}`}
+                >
                   {collection.Title}
                 </h2>
-                <p className="font-sen text-sm md:text-base lg:text-lg text-black/70 mt-4 leading-relaxed">
+                <p className="font-sen text-base text-black/70 -mt-2 leading-relaxed">
                   {collection.Description}
                 </p>
-                <a
-                  href={`/lookbook/${collection.titleSlugUrl}`}
-                  className="w-fit text-center mt-6 inline-block text-sm md:text-base font-semibold uppercase tracking-wide text-primary border border-primary px-6 py-2 hover:bg-primary hover:text-white transition rounded-md"
-                >
-                  Discover Fusion
-                </a>
+                <p className="text-sm text-black/60">{collection.Date}</p>
               </div>
+              <a
+                href={`/lookbook/${collection.titleSlugUrl}`}
+                className="absolute bottom-4 right-4 text-sm font-semibold uppercase tracking-wide text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-white transition rounded-md"
+              >
+                Discover
+              </a>
             </div>
           );
         })}
