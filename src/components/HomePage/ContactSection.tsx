@@ -55,7 +55,7 @@ export default function ContactSection() {
           Let's create something
         </p>
         <p className="text-2xl md:text-3xl lg:text-5xl font-playfair ">
-          beautiful together
+          beautiful together!
         </p>
 
         <p className="mt-4 md:mt-8 font-sen text-sm md:text-base lg:text-lg text-primary/60 tracking-tight">
