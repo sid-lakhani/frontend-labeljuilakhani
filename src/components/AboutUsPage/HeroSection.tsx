@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -7,7 +9,7 @@ export default function HeroSection() {
         Who we are
       </p> */}
       <h1 className="text-[12vw] md:text-6xl lg:text-7xl font-playfair text-primary tracking-tighter md:ml-24 mt-2 italic">
-      Behind the Label
+        Behind the Label
       </h1>
 
       <div className="h-full flex flex-col md:flex-row justify-center gap-8 md:gap-0 mt-8">
@@ -19,6 +21,8 @@ export default function HeroSection() {
             src="/about.webp"
             alt="Portrait"
             className="object-contain rounded-xl bg-[#A18668] w-full md:w-[90%]"
+            onContextMenu={(e) => e.preventDefault()}
+            draggable={false}
           />
           {/* <p className="w-full bg-[#A18668] uppercase flex items-center justify-center p-4 rounded-xl font-playfair text-3xl md:text-4xl lg:text-5xl text-quaternary">
             Jui Lakhani

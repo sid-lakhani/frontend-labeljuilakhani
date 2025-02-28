@@ -33,6 +33,8 @@ export default function HeroSection() {
           src={homeImage}
           alt="Home Image"
           className="w-full h-screen object-cover"
+          onContextMenu={(e) => e.preventDefault()}
+          draggable={false}
         />
       ) : (
         <div className="w-full min-h-screen bg-primary"></div>

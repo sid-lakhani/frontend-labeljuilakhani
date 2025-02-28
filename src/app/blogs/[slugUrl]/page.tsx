@@ -64,7 +64,13 @@ export default function BlogPage() {
             <p>{blog.BlogDate}</p>
             <p>Jui Lakhani</p>
           </div>
-          <img src={imageUrl} alt="blog" className="w-full object-contain" />
+          <img
+            src={imageUrl}
+            alt="blog"
+            className="w-full object-contain"
+            onContextMenu={(e) => e.preventDefault()}
+            draggable={false}
+          />
           <MarkdownRenderer content={blog.BlogContent} />
           <Link href="/blogs">
             <button className="mb-8 bg-quaternary text-tertiary border border-primary/80 font-montserrat font-bold text-xs px-4 py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary">

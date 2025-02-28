@@ -30,7 +30,10 @@ export default function CollectionPage() {
         if (data.data && data.data.length > 0) {
           setCollection(data.data[0]);
         } else {
-          console.error("No collection found for this titleSlugUrl:", titleSlugUrl);
+          console.error(
+            "No collection found for this titleSlugUrl:",
+            titleSlugUrl
+          );
         }
       } catch (error) {
         console.error("Error fetching collection data:", error);
@@ -41,16 +44,24 @@ export default function CollectionPage() {
   }, [titleSlugUrl]);
 
   if (!collection || !collection.Images || collection.Images.length === 0) {
-    return <p className="text-center text-gray-500">Collection not found or error fetching data.</p>;
+    return (
+      <p className="text-center text-gray-500">
+        Collection not found or error fetching data.
+      </p>
+    );
   }
 
-  const prevIndex = (currentIndex - 1 + collection.Images.length) % collection.Images.length;
+  const prevIndex =
+    (currentIndex - 1 + collection.Images.length) % collection.Images.length;
   const nextIndex = (currentIndex + 1) % collection.Images.length;
 
   return (
     <>
       <Header />
-      <div className="h-screen md:h-[100vw] lg:h-screen flex flex-col items-center justify-center px-[5vw] md:px-[10vw] lg:px-[15vw] pt-20 md:pt-28">
+      <div
+        onContextMenu={(e) => e.preventDefault()}
+        className="h-screen md:h-[100vw] lg:h-screen flex flex-col items-center justify-center px-[5vw] md:px-[10vw] lg:px-[15vw] pt-20 md:pt-28"
+      >
         {/* <div className="text-start w-full md:w-2/5 mb-4 md:mb-8">
           <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-primary">
             Lookbook
@@ -65,6 +76,8 @@ export default function CollectionPage() {
             alt="Previous Image"
             className="hidden md:block w-[15vw] object-cover opacity-50 cursor-pointer hover:opacity-75 transition-opacity"
             onClick={() => setCurrentIndex(prevIndex)}
+            onContextMenu={(e) => e.preventDefault()}
+            draggable={false}
           />
 
           {/* Main Image */}
@@ -72,6 +85,8 @@ export default function CollectionPage() {
             src={`https://cms.labeljuilakhani.in${collection.Images[currentIndex].url}`}
             alt={collection.Title}
             className="w-[80vw] md:w-[50vw] object-cover transition-opacity duration-500 ease-in-out"
+            onContextMenu={(e) => e.preventDefault()}
+            draggable={false}
           />
 
           {/* Next Thumbnail (only for larger screens) */}
@@ -80,6 +95,8 @@ export default function CollectionPage() {
             alt="Next Image"
             className="hidden md:block w-[15vw] object-cover opacity-50 cursor-pointer hover:opacity-75 transition-opacity"
             onClick={() => setCurrentIndex(nextIndex)}
+            onContextMenu={(e) => e.preventDefault()}
+            draggable={false}
           />
         </div>
 
@@ -95,7 +112,7 @@ export default function CollectionPage() {
             ></button>
           ))}
         </div>
-        
+
         {/* Thumbnails for mobile */}
         <div className="mt-4 flex md:hidden w-full justify-center gap-4">
           <img
@@ -103,12 +120,16 @@ export default function CollectionPage() {
             alt="Previous Image"
             className="w-[30vw] object-cover opacity-60 cursor-pointer"
             onClick={() => setCurrentIndex(prevIndex)}
+            onContextMenu={(e) => e.preventDefault()}
+            draggable={false}
           />
           <img
             src={`https://cms.labeljuilakhani.in${collection.Images[nextIndex].url}`}
             alt="Next Image"
             className="w-[30vw] object-cover opacity-60 cursor-pointer"
             onClick={() => setCurrentIndex(nextIndex)}
+            onContextMenu={(e) => e.preventDefault()}
+            draggable={false}
           />
         </div>
       </div>

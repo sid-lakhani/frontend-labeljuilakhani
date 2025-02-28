@@ -57,7 +57,7 @@ export default function BlogSection() {
         The Craft Journal
       </p>
       <p className="text-[10vw] md:text-7xl lg:text-8xl font-playfair text-primary tracking-tighter mt-2">
-         <span className="">Art in </span>Every Thread
+        <span className="">Art in </span>Every Thread
       </p>
 
       {/* Featured Blog */}
@@ -66,16 +66,22 @@ export default function BlogSection() {
           src={imageUrl}
           alt="featured-blog"
           className="w-full md:w-1/2 h-1/2 md:h-full object-cover bg-primary"
+          onContextMenu={(e) => e.preventDefault()}
+          draggable={false}
         />
         <div className="w-full py-4 md:w-1/2 h-1/2 md:h-full flex flex-col justify-center px-2 md:px-[5%] gap-2 md:gap-4 lg:gap-6">
           <p className="text-[10px] md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium">
             Featured
           </p>
-          <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl">{featuredBlog?.Title}</h1>
+          <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl">
+            {featuredBlog?.Title}
+          </h1>
           <p className="text-[10px] md:text-sm ml-1 tracking-[0.5em] uppercase font-montserrat font-medium">
             {featuredBlog?.BlogDate}
           </p>
-          <p className="font-sen text-[10px] md:text-sm">{featuredBlog?.shortDescription}</p>
+          <p className="font-sen text-[10px] md:text-sm">
+            {featuredBlog?.shortDescription}
+          </p>
           <Link href={`/blogs/${featuredBlog?.slugUrl}`}>
             <button className="bg-quaternary text-tertiary border border-black/80 font-montserrat md:font-bold text-xs px-2 py-1 md:px-4 md:py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary">
               Read More
@@ -89,11 +95,16 @@ export default function BlogSection() {
         {otherBlogs.map((post) => {
           const coverImageUrl = `https://cms.labeljuilakhani.in${post.coverImage.url}`;
           return (
-            <div key={post.id} className="flex flex-col border border-primary/10">
+            <div
+              key={post.id}
+              className="flex flex-col border border-primary/10"
+            >
               <img
                 src={coverImageUrl}
                 alt="blog"
                 className="w-full h-[300px] md:h-full object-cover"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable={false}
               />
               <div className="p-4 md:p-8">
                 <p className="text-primary text-xs md:text-sm md:mt-6 tracking-[0.5em] uppercase font-montserrat font-medium">

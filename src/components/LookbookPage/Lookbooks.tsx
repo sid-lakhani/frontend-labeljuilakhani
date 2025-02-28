@@ -60,6 +60,8 @@ export default function Lookbooks() {
                   src={ImageUrl}
                   alt={collection.Title}
                   className="h-auto w-full md:h-[500px] md:w-[350px] lg:h-[650px] lg:w-[450px] object-cover"
+                  onContextMenu={(e) => e.preventDefault()}
+                  draggable={false}
                 />
               </div>
 

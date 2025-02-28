@@ -41,11 +41,17 @@ export default function FeaturedLookbooks() {
       className={`relative h-[200px] md:h-[400px] lg:h-[600px] bg-secondary text-7xl flex items-center justify-center text-quaternary`}
     >
       {collection ? (
-        <Link href={`/lookbook/${collection.titleSlugUrl}`} className="relative w-full h-full">
+        <Link
+          href={`/lookbook/${collection.titleSlugUrl}`}
+          className="relative w-full h-full"
+          draggable={false}
+        >
           <img
             src={imageUrl}
             alt={collection.Title}
             className="w-full h-full object-cover"
+            onContextMenu={(e) => e.preventDefault()}
+            draggable={false}
           />
           <img
             src={"/arrow.png"}

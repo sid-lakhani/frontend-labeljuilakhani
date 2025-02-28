@@ -1,14 +1,18 @@
+'use client';
+
 import Link from "next/link";
 import MobileNav from "./MobileNav";
 
 export default function Header() {
   return (
     <div className="fixed top-[3%] left-[3%] w-[94%] h-[8%] flex items-center bg-quinary/50 backdrop-blur-xl shadow-lg rounded-lg px-4 lg:px-8 z-[999]">
-      <Link href="/" className="flex items-center">
+      <Link draggable={false} href="/" className="flex items-center">
         <img
           src="/Header.webp"
           alt="Logo"
           className="w-[150px] lg:w-[200px] md:w-[175px] object-contain"
+          onContextMenu={(e) => e.preventDefault()}
+          draggable={false}
         />
       </Link>
 

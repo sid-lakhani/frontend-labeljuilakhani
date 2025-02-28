@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -11,38 +11,38 @@ interface Collection {
 
 export default function ContactSection() {
   const [collection, setCollection] = useState<Collection | null>(null);
-  
-    useEffect(() => {
-      const fetchCollection = async () => {
-        try {
-          const response = await fetch(
-            `https://cms.labeljuilakhani.in/api/collections?filters[isLive][$eq]=true&populate=*`
-          );
-          const data = await response.json();
-          if (data.data && data.data.length > 0) {
-            setCollection(data.data[0]);
-          }
-        } catch (error) {
-          console.error("Error fetching collection:", error);
-        }
-      };
-  
-      fetchCollection();
-    }, []);
-  
-    const imageUrl = collection
-      ? `https://cms.labeljuilakhani.in${collection.HomePageContactIfLive.url}`
-      : "";
 
+  useEffect(() => {
+    const fetchCollection = async () => {
+      try {
+        const response = await fetch(
+          `https://cms.labeljuilakhani.in/api/collections?filters[isLive][$eq]=true&populate=*`
+        );
+        const data = await response.json();
+        if (data.data && data.data.length > 0) {
+          setCollection(data.data[0]);
+        }
+      } catch (error) {
+        console.error("Error fetching collection:", error);
+      }
+    };
+
+    fetchCollection();
+  }, []);
+
+  const imageUrl = collection
+    ? `https://cms.labeljuilakhani.in${collection.HomePageContactIfLive.url}`
+    : "";
 
   return (
     <div className="h-fit px-[5%] md:px-[10%] lg:px-[5%] flex flex-col md:flex-row items-center justify-center my-12 md:my-20 gap-4 md:gap-8 lg:gap-24">
-      {collection? (
-
+      {collection ? (
         <img
-        src={imageUrl}
-        alt="Contact"
-        className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[500px] lg:h-[500px] object-cover bg-primary"
+          src={imageUrl}
+          alt="Contact"
+          className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[500px] lg:h-[500px] object-cover bg-primary"
+          onContextMenu={(e) => e.preventDefault()}
+          draggable={false}
         />
       ) : (
         <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[500px] lg:h-[500px] bg-primary"></div>
