@@ -102,7 +102,7 @@ export default function BlogSection() {
               <img
                 src={coverImageUrl}
                 alt="blog"
-                className="w-full h-[300px] md:h-full object-cover"
+                className="w-full aspect-[100/133] object-cover"
                 onContextMenu={(e) => e.preventDefault()}
                 draggable={false}
               />
