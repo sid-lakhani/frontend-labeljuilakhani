@@ -6,7 +6,7 @@ interface Collection {
   titleSlugUrl: string;
   Description: string;
   Images: { url: string }[];
-  HomeImage: { url: string };
+  //HomeImage: {url: string};
 }
 
 async function getCollection(titleSlugUrl: string): Promise<Collection | null> {
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: { params: Params }) {
     title: collection ? `${collection.Title} | Lookbook - Label Jui Lakhani` : "Lookbook | Label Jui Lakhani",
     description: collection?.Description || "Explore our exclusive lookbook collection.",
     url: `https://labeljuilakhani.in/lookbook/${titleSlugUrl}`,
-    image: collection ? `https://cms.labeljuilakhani.in${collection.HomeImage.url}` : "https://labeljuilakhani.in/open-graph/HOME.png",
+    //image: collection ? `https://cms.labeljuilakhani.in${collection.HomeImage.url}` : "https://labeljuilakhani.in/open-graph/HOME.png",
   });
 }
 
