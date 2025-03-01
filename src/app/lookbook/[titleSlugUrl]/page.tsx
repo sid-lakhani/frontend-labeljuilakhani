@@ -31,9 +31,10 @@ export async function generateMetadata({ params }: { params: Params }) {
   const collection = await getCollection(titleSlugUrl);
 
   return constructMetadata({
-    title: collection ? `${collection.Title} | Label Jui Lakhani` : "Lookbook | Label Jui Lakhani",
+    title: collection ? `${collection.Title} | Lookbook - Label Jui Lakhani` : "Lookbook | Label Jui Lakhani",
     description: collection?.Description || "Explore our exclusive lookbook collection.",
     url: `https://labeljuilakhani.in/lookbook/${titleSlugUrl}`,
+    image: collection ? `https://cms.labeljuilakhani.in${collection.HomeImage.url}` : "https://labeljuilakhani.in/open-graph/HOME.png",
   });
 }
 
