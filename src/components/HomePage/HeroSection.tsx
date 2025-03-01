@@ -56,6 +56,7 @@ export default function HeroSection() {
           className="w-full h-screen object-cover"
           onContextMenu={(e) => e.preventDefault()}
           draggable={false}
+          fetchPriority="high"
         />
       ) : (
         <div className="w-full min-h-screen bg-primary"></div>

@@ -4,11 +4,11 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <div className="h-fit w-screen px-[5%] md:px-[8%] lg:px-[20%] pt-28 md:pt-32">
-      {/* <p className="text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-black/80">
-        Who we are
-      </p> */}
-      <h1 className="text-[12vw] md:text-6xl lg:text-7xl font-playfair text-primary tracking-tighter md:ml-24 mt-2 italic">
+    <div className="h-fit w-screen px-[5%] md:px-[8%] lg:px-[20%] pt-32 md:pt-36">
+      <p className="text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-primary/80 md:ml-[108px]">
+        About
+      </p>
+      <h1 className="text-[12vw] md:text-6xl lg:text-7xl font-playfair text-primary tracking-tighter md:ml-24 md:mt-2 italic">
         Behind the Label
       </h1>
 

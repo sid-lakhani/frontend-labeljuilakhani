@@ -87,6 +87,7 @@ export default function CollectionPage() {
             className="hidden md:block md:w-[50vw] object-cover transition-opacity duration-500 ease-in-out"
             onContextMenu={(e) => e.preventDefault()}
             draggable={false}
+            fetchPriority="high"
           />
 
           {/* Main Image with Click Navigation */}
@@ -108,6 +109,7 @@ export default function CollectionPage() {
               className="md:hidden w-full object-cover transition-opacity duration-500 ease-in-out"
               onContextMenu={(e) => e.preventDefault()}
               draggable={false}
+              fetchPriority="high"
             />
           </div>
 

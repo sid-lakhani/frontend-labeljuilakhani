@@ -56,7 +56,7 @@ export default function BlogSection() {
       <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-primary">
         The Craft Journal
       </p>
-      <p className="text-[10vw] md:text-7xl lg:text-8xl font-playfair text-primary tracking-tighter mt-2">
+      <p className="text-[11vw] md:text-6xl lg:text-7xl font-playfair text-primary tracking-tighter mt-2 italic">
         <span className="">Art in </span>Every Thread
       </p>
 

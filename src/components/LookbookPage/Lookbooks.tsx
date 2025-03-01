@@ -38,10 +38,10 @@ export default function Lookbooks() {
     <div className="min-h-screen w-screen py-[5%] px-[5%] md:px-[5%] lg:px-[15%] pt-32 md:pt-40">
       <div className="text-start mb-4 md:mb-8 lg:mb-12 md:px-[5%]">
         <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-primary">
-          Lookbooks
+          Lookbook
         </p>
-        <p className="text-[10vw] md:text-6xl lg:text-[3.5vw] font-playfair text-primary tracking-tight mt-2 leading-tight">
-          Stories Woven in <span className="italic">Every Design</span>
+        <p className="text-[10vw] md:text-5xl lg:text-7xl font-playfair text-primary tracking-tight mt-2 leading-tight italic">
+          Stories Woven in Every Design
         </p>
       </div>
 
