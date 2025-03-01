@@ -6,6 +6,7 @@ interface Collection {
   titleSlugUrl: string;
   Description: string;
   Images: { url: string }[];
+  HomeImage: { url: string };
 }
 
 async function getCollection(titleSlugUrl: string): Promise<Collection | null> {
