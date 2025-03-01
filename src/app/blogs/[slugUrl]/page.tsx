@@ -20,6 +20,7 @@ interface Blog {
 
 export default function BlogPage() {
   const [blog, setBlog] = useState<Blog | null>(null);
+  const [loadingImage, setLoadingImage] = useState(true); // Track image loading
   const { slugUrl } = useParams();
 
   useEffect(() => {
@@ -64,13 +65,21 @@ export default function BlogPage() {
             <p>{blog.BlogDate}</p>
             <p>Jui Lakhani</p>
           </div>
+
+          {/* Image with Loading State */}
+          {loadingImage && (
+            <div className="w-full h-[300px] md:h-[500px] bg-white/50 rounded-xl animate-pulse"></div>
+          )}
           <img
             src={imageUrl}
-            alt="blog"
-            className="w-full object-contain"
+            alt="blog image"
+            className="w-full h-auto object-cover"
             onContextMenu={(e) => e.preventDefault()}
             draggable={false}
+            onLoad={() => setLoadingImage(false)}
+            fetchPriority="high" // Ensures it loads first
           />
+
           <MarkdownRenderer content={blog.BlogContent} />
           <Link href="/blogs">
             <button className="mb-8 bg-quaternary text-tertiary border border-primary/80 font-montserrat font-bold text-xs px-4 py-2 transition-all duration-300 ease-in-out hover:bg-tertiary hover:text-quaternary">
