@@ -9,14 +9,6 @@ export const metadata = constructMetadata({
   description:
     "Jui Lakhani is all about blending contemporary aesthetics with cultural heritage, creating timeless collections with elegance and craftsmanship.",
   url: "https://labeljuilakhani.in/about",
-  keywords: [
-    "Label Jui Lakhani",
-    "Luxury Ethnic Fashion",
-    "About Us",
-    "Our Story",
-    "Indian Fashion",
-    "Handmade Couture",
-  ],
 });
 
 export default function Page() {

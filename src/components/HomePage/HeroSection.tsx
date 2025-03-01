@@ -41,11 +41,11 @@ export default function HeroSection() {
   }, []);
 
   const titleCss =
-            title === "Evara"
-              ? "font-kenao text-5xl md:text-7xl lg:text-9xl"
-              : title === "रास"
-              ? "font-tillana text-7xl md:text-9xl lg:text-[144px] -mt-2"
-              : "font-kenao";
+    title === "Evara"
+      ? "font-kenao text-5xl md:text-7xl lg:text-9xl"
+      : title === "रास"
+        ? "font-tillana text-7xl md:text-9xl lg:text-[144px] -mt-2"
+        : "font-kenao";
 
   return (
     <div className="relative max-h-screen max-w-screen">

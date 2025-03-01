@@ -8,16 +8,6 @@ export const metadata = constructMetadata({
   description:
     "Create your dream outfit with Jui Lakhani’s custom design service. From bespoke bridal lehengas to personalized ensembles, we bring your vision to life with exquisite craftsmanship and contemporary elegance.",
   url: "https://labeljuilakhani.in/customs",
-  keywords: [
-    "Label Jui Lakhani Contact",
-    "Customer Support",
-    "Inquiries",
-    "Custom Outfits",
-    "Designer Consultation",
-    "Fashion Inquiries",
-    "Collaboration",
-    "Ethnic Wear Consultation",
-  ],
 });
 
 export default function Page() {

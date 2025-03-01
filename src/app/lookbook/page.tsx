@@ -8,14 +8,6 @@ export const metadata = constructMetadata({
   description:
     "Explore the lookbooks of Jui Lakhani’s collections – curated showcase of timeless pieces.",
   url: "https://labeljuilakhani.in/lookbook",
-  keywords: [
-    "Label Jui Lakhani Lookbooks",
-    "Luxury Fashion Collection",
-    "Indian Ethnic Wear",
-    "Designer Lookbooks",
-    "Designer Lehengas",
-    "Handcrafted Outfits",
-  ],
 });
 
 export default function Page() {
