@@ -35,7 +35,7 @@ export default function Lookbooks() {
   }, []);
 
   return (
-    <div className="min-h-screen w-screen py-[5%] px-[5%] md:px-[5%] lg:px-[15%] pt-32 md:pt-40">
+    <div className="min-h-screen w-full py-[5%] px-[5%] md:px-[5%] lg:px-[15%] pt-32 md:pt-40">
       <div className="text-start mb-4 md:mb-8 lg:mb-12 md:px-[5%]">
         <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-primary">
           Lookbook

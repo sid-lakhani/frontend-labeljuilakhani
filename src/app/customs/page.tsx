@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <div className="flex flex-col min-h-screen min-w-screen">
       <Header />
-      <div className="min-h-screen w-screen flex flex-col items-center py-[5%] px-[5%] md:px-[10%] lg:px-[20%] pt-28 md:pt-40">
+      <div className="min-h-screen w-full flex flex-col items-center py-[5%] px-[5%] md:px-[10%] lg:px-[20%] pt-28 md:pt-40">
         <h1 className="font-playfair font-semibold text-[9vw] md:text-6xl lg:text-7xl text-primary uppercase">
           Get in touch
         </h1>

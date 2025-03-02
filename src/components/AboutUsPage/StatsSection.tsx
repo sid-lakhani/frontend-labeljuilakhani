@@ -2,7 +2,7 @@ import React from "react";
 
 export default function StatsSection() {
   return (
-    <div className="w-screen py-20 px-5 md:px-[15%]">
+    <div className="w-full py-20 px-5 md:px-[15%]">
       {/* <div className="flex justify-evenly mt-16 text-center">
         <div>
           <p className="text-5xl md:text-7xl lg:text-8xl font-playfair text-[#766551] tracking-tighter">

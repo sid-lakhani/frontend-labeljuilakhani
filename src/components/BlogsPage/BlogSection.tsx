@@ -52,7 +52,7 @@ export default function BlogSection() {
   const imageUrl = `https://cms.labeljuilakhani.in${featuredBlog?.coverImage.url}`;
 
   return (
-    <div className="min-h-screen w-screen py-[5%] px-[5%] md:px-[10%] lg:px-[20%] pt-28 md:pt-40">
+    <div className="min-h-screen w-full py-[5%] px-[5%] md:px-[10%] lg:px-[20%] pt-28 md:pt-40">
       <p className="text-xs md:text-sm uppercase tracking-[0.5em] font-montserrat font-medium text-primary">
         The Craft Journal
       </p>
